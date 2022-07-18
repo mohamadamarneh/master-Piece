@@ -69,29 +69,27 @@
 </div>
 </div>
 <div class="cart-offcanvas-overlay"></div>
-<!-- cart area end  -->
+<!-- cart area end   img/slider/aYvlsP.jpg -->
 
 <!-- slider start -->
 <div class="slider-active2 swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide slider-item bgclr3 pb-200">
             <div class="shapes_3">
-                <a class="popup-video" href="https://youtu.be/SwLvPcEvvfw"><i class="fal fa-play absoulute play"></i></a>
-                <a class="popup-video" href="https://youtu.be/SwLvPcEvvfw"><i class="fal fa-pause absoulute pause"></i></a>
                 <h2 class="absoulute text_3">Top sale</h2>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                         <div class="slider__content pt-190">
-                            <h4 class="mb-60 wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s"><i class="fal fa-pause"></i>Top sale products</h4>
+                            
                             <h2 class="mb-80 wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".6s">Sport <br>life style</h2>
                             <a class="button-style-3 wow fadeInUp" data-wow-duration=".5s" data-wow-delay="1s" href="shop.html">Discover Now</a>
                         </div>
                     </div>
                     <div class="col-xl-7 offset-xl-1 col-lg-8 col-md-8 col-sm-12 d-none d-lg-block">
                         <div class="slider_image_3">
-                            <img src="img/slider/slider-img-3.png" alt="">
+                            <img src="img/slider/slider-img-3.png"  alt="">
                         </div>
                     </div>
                 </div>
@@ -113,8 +111,8 @@
                         <span class="offer-text offer_3">hot deal<i class="far fa-stars"></i></span>
                     </div>
                     <div class="fetures_3_body">
-                        <a href="shop.html"><h2 class="mb-60">Helmet<br>Sport<br> for women’s</h2></a>
-                        <p>sale <span>20% Off</span><br> Helmet for Women’s</p>
+                        <a href="shop.html"><h2 class="mb-60">reservations<br>stadiums<br> for All</h2></a>
+                        <p>sale <span>20% Off</span><br> Tennis Stadiums</p>
                     </div>
                     <div class="fetures_3_footer"></div>
                 </div>
@@ -122,11 +120,11 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-sm-none d-md-block">
                 <div class="fetures_3" data-background="img/features/banar3-2.png">
                     <div class="fetures_3_header pt-30 text-center ">
-                       <p>This month big sale</p>
+                       <p>This month big Deal</p>
                     </div>
                     <div class="fetures_3_body text-center">
-                        <a href="shop.html"><h2 class="fetures_s_2 fesection-2 mb-80">Jacket<span> Sportwear</span></h2></a>
-                        <a class="button_style_f" href="shop.html">Use Code: GOTA360</a>>
+                        <a href="shop.html"><h2 class="fetures_s_2 fesection-2 mb-80">football<span> Stadiums</span></h2></a>
+                        <a class="button_style_f" href="shop.html">Hot deals in Irbid</a>
                     </div>
                     <div class="fetures_3_footer mb-80"></div>
                 </div>
@@ -134,11 +132,11 @@
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                 <div class="fetures_3" data-background="img/features/banar3-3.png">
                     <div class="fetures_3_header pt-30 ">
-                       <span class="text-white text-uppercase">gota store</span>
+                       <span class="text-white text-uppercase">New Stadiums </span>
                     </div>
                     <div class="fetures_3_body">
-                        <a href="shop.html"><h2 class="mb-30">baseball<br>Sport<br> for women’s</h2></a>
-                        <p>sale <span class="text-clr-change"> 20% Off</span><br> Helmet for Women’s</p>
+                        <a href="shop.html"><h2 class="mb-30"><br>Basketball<br>in jordan </h2></a>
+                        <p>sale <span class="text-clr-change"> 15% Off</span><br>for basketball stadiums</p>
                     </div>
                     <div class="fetures_3_footer"></div>
                 </div>
@@ -153,8 +151,8 @@
     <div class="container-fluid">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div class="section-wrapper text-center mb-35">
-                    <h2 class="section-title">Explore Our Bestsellers</h2>
-                    <p>Commodo sociosqu venenatis cras dolor sagittis integer luctus sem primis<br> eget maecenas sed urna malesuada.</p>
+                    <h2 class="section-title">Explore Our Stadiums</h2>
+                    <p>new stadiums around you <br> explore our stadiums in jordan.</p>
                 </div>
             </div>
         <div class="row">
@@ -162,16 +160,16 @@
                 <div class="categories__tab">
                     <ul class="nav nav-tabs justify-content-center mb-55" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">All SHoes</button>
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">All Staduims</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Men’s</button>
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Football</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">WoMen’s</button>
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Basketball</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact2-tab" data-bs-toggle="tab" data-bs-target="#contact2" type="button" role="tab" aria-controls="contact2" aria-selected="false">Kids</button>
+                            <button class="nav-link" id="contact2-tab" data-bs-toggle="tab" data-bs-target="#contact2" type="button" role="tab" aria-controls="contact2" aria-selected="false">Tennis</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -183,15 +181,15 @@
                                             <div class="product">
                                                 <div class="product__thumb">
                                                     <a href="single.html">
-                                                        <img class="product-primary" src="img/product/9.jpg" alt="product_image">
-                                                        <img class="product-secondary" src="img/product/9-2.jpg" alt="product_image">
+                                                        <img class="product-primary" src="img\product\tumblr_aa5cfc25948672e5f090c3703ea2463d_76a44ac3_1280.jpg" alt="product_image">
+                                                        <img class="product-secondary" src="img/product/tumblr_105019789259685ff476120ff8d3dfff_2c99268b_1280.jpg" alt="product_image">
                                                     </a>
                                                     <div class="product__update">
                                                         <a class="#">new</a>
                                                     </div>
                                                     <div class="product-info mb-10">
                                                         <div class="product_category">
-                                                            <span>Shoes, Clothing</span>
+                                                            <span>Jordan, Irbid</span>
                                                         </div>
                                                         <div class="product_rating">
                                                             <a href="#"><i class="fal fa-star start-color"></i></a>
@@ -202,10 +200,10 @@
                                                         </div>
                                                     </div>
                                                        <div class="product__name">
-                                                        <h4><a href="shop.html">Flat Sandal for Women</a></h4>
+                                                        <h4><a href="shop.html">Zabda republic stadium </a></h4>
                                                         <div class="pro-price">
-                                                            <p class="p-absoulute pr-1"><span>$</span>680.00 - <span>$</span>680.00</p>
-                                                            <a class="p-absoulute pr-2" href="#">add to cart</a>
+                                                            <p class="p-absoulute pr-1"><span>$15</span> <span>per</span> hour</p>
+                                                            <a class="p-absoulute pr-2" href="#">Book now</a>
                                                         </div>
                                                     </div>
                                             <div class="product__action">
@@ -321,9 +319,9 @@
                                                         <img class="product-primary" src="img/product/4.jpg" alt="product_image">
                                                         <img class="product-secondary" src="img/product/4-2.jpg" alt="product_image">
                                                     </a>
-                                                    <!-- <div class="product__update">
+                                                    {{-- <div class="product__update">
                                                         <a class="#">new</a>
-                                                    </div> -->
+                                                    </div>  --}}
                                                     <div class="product-info mb-10">
                                                         <div class="product_category">
                                                             <span>Shoes, Clothing</span>
@@ -1466,8 +1464,8 @@
                                             <div class="product product_3">
                                                 <div class="product__thumb">
                                                     <a href="single.html">
-                                                        <img class="product-primary" src="img/product/4.jpg" alt="product_image">
-                                                        <img class="product-secondary" src="img/product/4-2.jpg" alt="product_image">
+                                                        <img class="product-primary" src="img\product\tumblr_aa5cfc25948672e5f090c3703ea2463d_76a44ac3_1280.jpg" alt="product_image">
+                                                        <img class="product-secondary" src="img\product\tumblr_105019789259685ff476120ff8d3dfff_2c99268b_1280.jpg" alt="product_image">
                                                     </a>
                                                     <!-- <div class="product__update">
                                                         <a class="#">new</a>

@@ -146,22 +146,11 @@
             <div class="col-xl-3 col-lg-4 col-md-12">
                 <div class="sidebar">
                     <div class="product-widget">
-                        <h3 class="widget-title mb-30">Product categories</h3>
+                        <h3 class="widget-title mb-30">Stadiums categories</h3>
                         <ul class="product-categories">
-                            <li><a href="shop.html">Sportswear <span>(5)</span></a></li>
-                            <li><a href="shop.html">Training Wear <span>(0)</span></a></li>
-                            <li><a href="shop.html">Women’s <span>(2)</span></a></li>
-                            <li><a href="shop.html">Youth <span>(4)</span></a></li>
-                            <li><a href="shop.html">Handbag <span>(2)</span></a></li>
-                            <li><a href="shop.html">Helmet for Women’s <span>(0)</span></a></li>
-                            <li><a href="shop.html">Kids & Young <span>(0)</span></a></li>
-                            <li><a href="shop.html">Mens Running <span>(0)</span></a></li>
-                            <li><a href="shop.html"> Outerwears <span>(9)</span></a></li>
-                            <li><a href="shop.html">Sneaker <span>(1)</span></a></li>
-                            <li><a href="shop.html">Sportswear <span>(5)</span></a></li>
-                            <li><a href="shop.html">Training Wear <span>(0)</span></a></li>
-                            <li><a href="shop.html">Women’s <span>(2)</span></a></li>
-                            <li><a href="shop.html">Youth <span>(4)</span></a></li>
+                            <li><a href="shop.html">Football <span>(5)</span></a></li>
+                            <li><a href="shop.html">Basketball <span>(0)</span></a></li>
+                            <li><a href="shop.html">Tennis <span>(2)</span></a></li>
                         </ul>
                     </div>
                     <div class="product-widget pt-50">
@@ -180,44 +169,9 @@
                         </form>
                     
                     </div>
-                    <div class="product-widget pt-50">
-                        <h3 class="widget-title mb-30">Size</h3>
-                        <div class="layer-size">
-                            <span>3XL</span>
-                            <span>L</span>
-                            <span>M</span>
-                        </div>
-                    </div>
-                    <div class="product-widget pt-50">
-                        <h3 class="widget-title mb-30">Color Options</h3>
-                        <div class="colors-layer">
-                            <a href="shop.html"><span class="blue"></span></a>
-                            <a href="shop.html"><span class="gray"></span></a>
-                            <a href="shop.html"><span class="skyblue"></span></a>
-                            <a href="shop.html"><span class="red"></span></a>
-                            <a href="shop.html"><span class="yellow"></span></a>
-                        </div>
-                    </div>
+                
                     <div class="product_list_widget">
                         <h3 class="widget-title mb-30 pt-50">Top rated</h3>
-                        <div class="item-widget">
-                            <div class="img-left">
-                                <a href="single.html"><img src="img/product/10.jpg" alt="product-meta"></a>
-                            </div>
-                            <div class="product-meta">
-                                <a href="single.html"><h4 class="sm-title">Arsenal Home Jersey</h4></a>
-                                <span>$55.00</span>
-                            </div>
-                        </div>
-                        <div class="item-widget">
-                            <div class="img-left">
-                                <a href="single.html"><img src="img/product/11.jpg" alt="product-meta"></a>
-                            </div>
-                            <div class="product-meta">
-                                <a href="single.html"><h4 class="sm-title">Lorem Ipsum simply</h4></a>
-                                <span>$55.00</span>
-                            </div>
-                        </div>
                         <div class="item-widget">
                             <div class="img-left">
                                 <a href="single.html"><img src="img/product/12.jpg" alt="product-meta"></a>
@@ -241,11 +195,11 @@
                         <h3 class="widget-title mb-30">Product tags</h3>
                         <div class="tags mb-50">
                             <a href="shop.html">Basketball</a>
-                            <a href="shop.html">Handbag</a>
-                            <a href="shop.html">Jackets</a>
-                            <a href="shop.html">Kids & Young</a>
-                            <a href="shop.html">Training Wear</a>
-                            <a href="shop.html">Women’s</a>
+                            <a href="shop.html">Football</a>
+                            <a href="shop.html">Tennis</a>
+                            <a href="shop.html">Discounts</a>
+                            <a href="shop.html">10 %</a>
+        
                         </div>
                     </div>
                 </div>
@@ -277,7 +231,7 @@
                             </nav>                                 
                     </div>
                     <div class="shop-filtaring">
-                        <div class="filter-select">
+                        {{-- <div class="filter-select">
                             <select class="order-by">
                                 <option value="Default setting">Default setting</option>
                                 <option value="Default setting">short by popularity</option>
@@ -344,7 +298,7 @@
                                         </div>
                                     </div>
                                 </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="shop-page-product pt-50 pb-100">

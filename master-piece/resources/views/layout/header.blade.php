@@ -57,47 +57,21 @@
                             <div class="gota_top pl-40 gota_top_bg gota_top_bg_3">
                                 <div class="gota_lang gota_lang_3 pl-70">
                                     <ul class="d-sm-none d-md-block">
-                                        <li><a class="fw-bold" href="#">usd<i class="fal fa-chevron-down"></i></a>
+                                        <li><a class="fw-bold" href="#">jod<i class="fal fa-chevron-down"></i></a>
                                             <ul class="additional_dropdown">
-                                                <li><a href="#">euro</a></li>
+                                                <li><a href="#">usd</a></li>
                                             </ul>
                                         </li>
                                         <li><a class="fw-bold" href="#">english<i class="fal fa-chevron-down"></i></a>
                                             <ul class="additional_dropdown">
-                                                <li><a href="#">frences</a></li>
-                                                <li><a href="#">japanes</a></li>
+                                                <li><a href="#">Arabic</a></li>
+
                                             </ul>
                                         </li>
                                     </ul>
-                                    <div class="login-icon d-none d-md-block">
-                                        <button class="login"><i class="fal fa-ellipsis-h"></i></button>
-                                        <div class="sm_login_wrapper">
-                                            <form action="#">
-                                                <div class="sm-input-wrap">
-                                                    <label>Username or Email Address</label>
-                                                    <input type="text" name="fname">
-                                                </div>
-                                                <div class="sm-input-wrap">
-                                                    <label>Password</label>
-                                                    <input type="text" name="pass">
-                                                </div>
-                                                <div class="sm-input-wrap-2"> 
-                                                    <input type="checkbox" name="option">
-                                                    <label>remember</label>
-                                                </div>
-                                                <div class="sm-input-wrap"> 
-                                                    <button type="submit">log in</button>
-                                                </div>
-                                                <div class="forgetpass">
-                                                    <button>Lost Password</button>
-                                                    <button>register</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
                                     <div class="gota_cart absoulute gota_cart_3 ">
-                                        <a href="javascript:void(0)"><i class="fal fa-shopping-cart"></i>My Bag<span class="counter"> (2)</span></a>
-                                        <!-- <i class="fal fa-shopping-bag"></i> -->
+                                        {{-- <a href="javascript:void(0)"><i class=""></i>Reservations<span class="counter"> (2)</span></a> --}}
+                                        <i class="fal fa-shopping-bag"></i>
                                     </div>
                                 </div>
                             </div>
@@ -117,103 +91,12 @@
                                     <li><a href="#"><i class="fal fa-bars"></i></a></li>
                                     <li class="position-static"><a href="javascript:void(0)">browse categories</a>
                                         <ul class="vertical-dropdown">
-                                            <li><a href="#">Outerwears</a></li>
+                                            <li><a href="#">Soccer</a></li>
                                             <li><a href="#">Basketball</a></li>
-                                            <li class="position-static"><a href="#">Stools<i class="fad fa-chevron-right"></i></a>
-                                                <ul class="vertical_mega_menu" data-background='img/mega-menu/vertical.jpg'>
-                                                    <li>
-                                                        <h4> Basketball</h4>
-                                                            <ul class="vertical_mega_item">
-                                                                <li><a href="shop.html">Vintage Violet</a></li>
-                                                                <li><a href="shop.html">Shoes style</a></li>
-                                                                <li><a href="shop.html">Rugby shoes</a></li>
-                                                                <li><a href="shop.html">T-shirts + Tops</a></li>
-                                                                <li><a href="shop.html">Vintage Violet</a></li>
-                                                                <li><a href="shop.html">Shoes style</a></li>
-                                                                <li><a href="shop.html">Tracksuits</a></li>
-                                                                <li><a href="shop.html">Outerwears</a></li>
-                                                                <li><a href="shop.html">Equipment</a></li>
-                                                                <li><a href="shop.html">jackets</a></li>
-                                                                <li><a href="shop.html">Newest Sneakers</a></li>
-                                                            </ul>
-                                                    </li>
-                                                    <li>
-                                                        <h4> Running</h4>
-                                                            <ul class="vertical_mega_item">
-                                                                <li><a href="shop.html">Rugby shoes</a></li>
-                                                                <li><a href="shop.html">T-shirts + Tops</a></li>
-                                                                <li><a href="shop.html">jackets</a></li>
-                                                                <li><a href="shop.html">T-shirts + Tops</a></li>
-                                                                <li><a href="shop.html">Newest Sneakers</a></li>
-                                                                <li><a href="shop.html">Sneaker</a></li>
-                                                                <li><a href="shop.html">Tracksuits</a></li>
-                                                                <li><a href="shop.html">Sportswear</a></li>
-                                                                <li><a href="shop.html">Training Wear</a></li>
-                                                                <li><a href="shop.html">Women’s</a></li>
-                                                                <li><a href="shop.html">Youth</a></li>
-                                                            </ul>
-                                                    </li>
-                                                    
-                                                </ul>
-                                            </li>
-                                            <li><a href="shop.html">Mens Running</a></li>
-                                            <li><a href="shop.html">Youth</a></li>
-                                            <li><a href="shop.html">Women’s</a> </li>
-                                            <li><a href="shop.html">Handbag</a></li>
-                                            <li><a href="shop.html">Helmet<i class="fad fa-chevron-right"></i></a>
-                                                <ul class="vertical_mega_menu">
-                                                    <li>
-                                                        <h4> Basketball</h4>
-                                                            <ul class="vertical_mega_item">
-                                                                <li><a href="#">Vintage Violet</a></li>
-                                                                <li><a href="#">Shoes style</a></li>
-                                                                <li><a href="#">Rugby shoes</a></li>
-                                                                <li><a href="#">T-shirts + Tops</a></li>
-                                                                <li><a href="#">Vintage Violet</a></li>
-                                                                <li><a href="#">Shoes style</a></li>
-                                                                <li><a href="#">Tracksuits</a></li>
-                                                                <li><a href="#">Outerwears</a></li>
-                                                                <li><a href="#">Equipment</a></li>
-                                                                <li><a href="#">jackets</a></li>
-                                                                <li><a href="#">Newest Sneakers</a></li>
-                                                            </ul>
-                                                    </li>
-                                                    <li>
-                                                        <h4> Running</h4>
-                                                            <ul class="vertical_mega_item">
-                                                                <li><a href="#">Rugby shoes</a></li>
-                                                                <li><a href="#">T-shirts + Tops</a></li>
-                                                                <li><a href="#">jackets</a></li>
-                                                                <li><a href="#">T-shirts + Tops</a></li>
-                                                                <li><a href="#">Newest Sneakers</a></li>
-                                                                <li><a href="#">Sneaker</a></li>
-                                                                <li><a href="#">Tracksuits</a></li>
-                                                                <li><a href="#">Sportswear</a></li>
-                                                                <li><a href="#">Training Wear</a></li>
-                                                                <li><a href="#">Women’s</a></li>
-                                                                <li><a href="#">Youth</a></li>
-                                                            </ul>
-                                                    </li>
-                                                    <li>
-                                                        <h4> More item</h4>
-                                                            <ul class="vertical_mega_item">
-                                                                <li><a href="#">Outerwears</a></li>
-                                                                <li><a href="#">Sneaker</a></li>
-                                                                <li><a href="#">Youth</a></li>
-                                                                <li><a href="#">jackets</a></li>
-                                                                <li><a href="#">Newest Sneakers</a></li>
-                                                                <li><a href="#">Sneaker</a></li>
-                                                                <li><a href="#">Tracksuits</a></li>
-                                                                <li><a href="#">Sportswear</a></li>
-                                                                <li><a href="#">Training Wear</a></li>
-                                                                <li><a href="#">Women’s</a></li>
-                                                                <li><a href="#">Youth</a></li>
-                                                            </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="shop.html">Kids & Young</a></li>
-                                            <li><a href="shop.html">More Categories</a></li>
+                                            
+                                            
+                                            <li><a href="shop.html">Tennis</a></li>
+                                            
                                         </ul>
                                     </li>
                                     <li><a href="#"><i class="fal fa-chevron-down"></i></a></li>
@@ -224,22 +107,20 @@
                              <div class="main-menu main-menu-3">
                                 <nav id="mobile-menu">
                                     <ul>                                                                    
-                                        <li class="menu-item"><a href="#">Home </a>
+                                        <li class="menu-item active"><a href="/">Home </a>
                                         </li>
                                         <li class="position-static menu-item-has-children"><a href='/stadiums'>Shop</a>
                                             <ul class="mega_menu" data-background="img/mega-menu/product.jpg">
                                                 <li>
                                                     <h4 class="mega_title">Shop Layout</h4>
                                                     <ul class="mega_item">
-                                                        <li><a href="shop.html">Pagination</a></li>
-                                                        <li><a href="shop.html">Ajax Load More</a></li>
-                                                        <li><a href="shop-3-width.html">Infinite Scroll</a></li>
-                                                        <li><a href="shop-right.html">Sidebar Right</a></li>
-                                                        <li><a href="shop.html">Sidebar Left</a></li>
+                                                        <li><a href="shop.html">Soccer</a></li>
+                                                        <li><a href="shop.html">Basketball</a></li>
+                                                        <li><a href="shop-3-width.html">Tennis</a></li>
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <h4 class="mega_title">shop pages</h4>
+                                                    <h4 class="mega_title">Categories</h4>
                                                     <ul class="mega_item">
                                                         <li><a href="shop-list.html">List View</a></li>
                                                         <li><a href="shop-sm.html">Small Products</a></li>
@@ -265,39 +146,39 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="position-static menu-item-has-children"><a href="service.html">Features</a>
+                                        <li class="position-static menu-item-has-children"><a href="service.html">Categories</a>
                                             <ul class="mega_menu_2">
                                                 <li data-background="img/mega-menu/product2.jpg">
                                                     <h4 class="mega_title_2">Basketball</h4>
                                                     <ul class="mega_item_2">
-                                                        <li><a href="shop.html">East Hampton Fleece</a></li>
-                                                        <li><a href="shop.html">Faxon Canvas Low</a></li>
-                                                        <li><a href="shop.html">Habitasse dictumst</a></li>
+                                                        <li><a href="shop.html">stadium 1</a></li>
+                                                        <li><a href="shop.html">stadium 1</a></li>
+                                                        <li><a href="shop.html">stadium 1</a></li>
                                                         <li><a href="shop.html">Kaoreet lobortis</a></li>
                                                         <li><a href="shop.html">NikeCourt Zoom Prestige</a></li>
                                                         <li><a href="shop.html">NikeCourts Air Zoom</a></li>
                                                         <li><a href="shop.html">NikeCourts Air Zoom</a></li>
                                                     </ul>
                                                 </li>
-                                                <li data-background="img/mega-menu/product3.jpg">
-                                                    <h4 class="mega_title_2">Helmet for Women’s</h4>
+                                                <li data-background='img/mega-menu/soccer-nav(1).png'>
+                                                    <h4 class="mega_title_2">Soccer</h4>
                                                     <ul class="mega_item_2">
-                                                        <li><a href="shop.html">Arsenal Home Jersey</a></li>
-                                                        <li><a href="shop.html">Arsenal Home Jersey</a></li>
-                                                        <li><a href="shop.html">Pellentesque posuere</a></li>
-                                                        <li><a href="shop.html">Running 3-Stripes</a></li>
-                                                        <li><a href="shop.html">Running 3-Stripes</a></li>
+                                                        <li><a href="shop.html">stadium 1y</a></li>
+                                                        <li><a href="shop.html">stadium 1</a></li>
+                                                        <li><a href="shop.html">stadium 1</a></li>
+                                                        <li><a href="shop.html">stadium 1</a></li>
+                                                        <li><a href="shop.html">stadium 1</a></li>
                                                         <li><a href="shop.html">V-Neck T-Shirt</a></li>
                                                         <li><a href="shop.html">WordPress Pennant</a></li>
                                                     </ul>
                                                 </li>
                                                 <li data-background="img/mega-menu/product4.jpg">
-                                                    <h4 class="mega_title_2">Basketball</h4>
+                                                    <h4 class="mega_title_2">Tennis</h4>
                                                     <ul class="mega_item_2">
-                                                        <li><a href="shop.html">East Hampton Fleece</a></li>
-                                                        <li><a href="shop.html">Faxon Canvas Low</a></li>
-                                                        <li><a href="shop.html">Habitasse dictumst</a></li>
-                                                        <li><a href="shop.html">Kaoreet lobortis</a></li>
+                                                        <li><a href="shop.html">stadium 1</a></li>
+                                                        <li><a href="shop.html">stadium 1</a></li>
+                                                        <li><a href="shop.html">stadium 1</a></li>
+                                                        <li><a href="shop.html">stadium 1</a></li>
                                                         <li><a href="shop.html">NikeCourt Zoom Prestige</a></li>
                                                         <li><a href="shop.html">NikeCourts Air Zoom</a></li>
                                                         <li><a href="shop.html">NikeCourts Air Zoom</a></li>
@@ -305,42 +186,75 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item-has-children"><a href="blog.html">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog-grid.html">Blog Grid</a></li>
-                                                <li><a href="blog-large.html">Blog large</a></li>
-                                                <li><a href="blog-left.html">Blog left</a></li>
-                                                <li><a href="blog-right.html">Blog Right</a></li>
-                                                <li><a href="blog-no-sidebar.html">Blog no sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children"><a href="about.html">pages</a>
-                                            <ul class="sub-menu white-color">
-                                                           <li><a href="about.html">about us</a></li>
-                                            <li><a href="about-2.html">about us 2</a></li>
-                                            <li><a href="contact.html">contact</a></li>
-                                            <li><a href="contact-2.html">contact 2</a></li>
-                                            <li><a href="single.html">single page</a></li>
-                                            <li><a href="cart.html">cart page</a></li>
-                                            <li><a href="checkout.html">checkout page</a></li>
-                                            <li><a href="404.html">page 404</a></li>
-                                            <li><a href="service.html">services</a></li>
-                                            <li><a href="accordion.html">frequently questions</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="service.html">Portfolio</a></li>
+                                       
+
+                                        <li><a href="service.html">Login</a></li>
+                                        <li><a href="service.html">Register</a></li>
+                                        <li><a href="service.html">About</a></li>
                                         <li><a href="contact.html">contact us </a></li>
+                                        <li class="menu-item-has-children"><a href="blog.html">Profile</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog-grid.html">Account</a></li>
+                                                <li><a href="blog-large.html">Log out</a></li>
+                
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
+                        
                         <div class="col-xl-2 col-lg-8 col-md-4  col-sm-4 d-sm-none d-md-block">
                             <div class="gota_call d-none d-xl-block">
-                                <p><i class="far fa-phone-volume"></i>Hotline: (+800) 123 456 7890</p>
+                               <!-- <p><i class="far fa-phone-volume"></i>Hotline: (+800) 123 456 7890</p> -->
+                                
                             </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </header>
         <!-- header area end -->
+
+        <div class="cart__sidebar">
+            <div class="container">
+                <div class="cart__content">
+                    <div class="cart-text">
+                        <h3 class="mb-40">Shopping cart</h3>
+                        <div class="add_cart_product">
+                            <div class="add_cart_product__thumb">
+                                <img src="assets/img/product/29-3.jpg" alt="">
+                            </div>
+                            <div class="add_cart_product__content">
+                                <h5><a href="shop.html">Running 3-Stripes</a></h5>
+                                <p>1 × $66.00</p>
+                                <button class="cart_close"><i class="fal fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="add_cart_product">
+                            <div class="add_cart_product__thumb">
+                                <img src="assets/img/product/17.jpg" alt="">
+                            </div>
+                            <div class="add_cart_product__content">
+                                <h5><a href="shop.html">Buddy non Stripes</a></h5>
+                                <p>1 × $40.00</p>
+                                <button class="cart_close"><i class="fal fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fal fa-times"></i>
+                    </div>
+                    <div class="cart-bottom">
+                        <div class="cart-bottom__text">
+                            <span>Subtotal:</span>
+                            <span class="end">$121.00</span>
+                            <a href="cart.html">view cart</a>
+                            <a href="checkout.html">checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-offcanvas-overlay"></div>
