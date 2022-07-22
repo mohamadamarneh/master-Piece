@@ -5,28 +5,28 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Gota eCommerce HTML5 Template</title>
+        <title>Gota eCommerce HTML5</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="manifest" href="site.html">
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href={{asset("img/favicon.ico")}}>
         <!-- Place favicon.ico in the root directory -->
 
 		<!-- CSS here -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/themify-icons.css">
-        <link rel="stylesheet" href="css/futura-std-font.css">
-        <link rel="stylesheet" href="css/meanmenu.css">
-        <link rel="stylesheet" href="css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href={{ asset("css/bootstrap.min.css")}}>
+        <link rel="stylesheet" href={{ asset('css/owl.carousel.min.css')}}>
+        <link rel="stylesheet" href={{asset('css/animate.min.css')}}>
+        <link rel="stylesheet" href={{asset('css/magnific-popup.css')}}>
+        <link rel="stylesheet" href={{ asset("css/fontawesome-all.min.css")}}>
+        <link rel="stylesheet" href={{asset("css/themify-icons.css")}}>
+        <link rel="stylesheet" href={{asset("css/futura-std-font.css")}}>
+        <link rel="stylesheet" href={{asset("css/meanmenu.css")}}>
+        <link rel="stylesheet" href={{asset("css/swiper-bundle.min.css")}}>
+        <link rel="stylesheet" href={{asset("css/slick.css")}}>
         
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href={{asset("css/style.css")}}>
+        <link rel="stylesheet" href={{asset("css/responsive.css")}}>
     </head>
     <body>
 
@@ -42,7 +42,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-1 col-lg-2 col-md-2">
                             <div class="logo_3">
-                                <a href="index.html"><img src="img/logo/logo-1.png" alt="logo"></a>
+                                <a href="index.html"><img src={{asset("img/logo/logo-1.png")}} alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 d-none  d-sm-none d-xl-block">
@@ -79,6 +79,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="gota_bottom gota_bottom_3 position-relative">
                 <div class="container">
                     <div class="row align-items-center">
@@ -110,7 +111,7 @@
                                         <li class="menu-item active"><a href="/">Home </a>
                                         </li>
                                         <li class="position-static menu-item-has-children"><a href='/stadiums'>Shop</a>
-                                            <ul class="mega_menu" data-background="img/mega-menu/product.jpg">
+                                            <ul class="mega_menu" data-background={{asset("img/mega-menu/product.jpg")}}>
                                                 <li>
                                                     <h4 class="mega_title">Shop Layout</h4>
                                                     <ul class="mega_item">
@@ -131,6 +132,7 @@
                                                     </ul>
                                                 </li>
                                                 <li>
+
                                                     <h4 class="mega_title">Product Layout</h4>
                                                     <ul class="mega_item">
                                                         <li><a href="shop-sticky.html">Description Sticky</a></li>
@@ -140,6 +142,7 @@
                                                         <li><a href="single-right.html">Thumbnail Right</a></li>
                                                         <li><a href="single-bottom.html"> Thumbnail Botttom</a></li>
                                                     </ul>
+                                                    
                                                 </li>
                                                 <li>
     
@@ -148,7 +151,7 @@
                                         </li>
                                         <li class="position-static menu-item-has-children"><a href="service.html">Categories</a>
                                             <ul class="mega_menu_2">
-                                                <li data-background="img/mega-menu/product2.jpg">
+                                                <li data-background={{asset("img/mega-menu/product2.jpg")}}>
                                                     <h4 class="mega_title_2">Basketball</h4>
                                                     <ul class="mega_item_2">
                                                         <li><a href="shop.html">stadium 1</a></li>
@@ -160,7 +163,7 @@
                                                         <li><a href="shop.html">NikeCourts Air Zoom</a></li>
                                                     </ul>
                                                 </li>
-                                                <li data-background='img/mega-menu/soccer-nav(1).png'>
+                                                <li data-background={{asset('img/mega-menu/soccer-nav(1).png')}}>
                                                     <h4 class="mega_title_2">Soccer</h4>
                                                     <ul class="mega_item_2">
                                                         <li><a href="shop.html">stadium 1y</a></li>
@@ -172,7 +175,7 @@
                                                         <li><a href="shop.html">WordPress Pennant</a></li>
                                                     </ul>
                                                 </li>
-                                                <li data-background="img/mega-menu/product4.jpg">
+                                                <li data-background={{asset("img/mega-menu/product4.jpg")}}>
                                                     <h4 class="mega_title_2">Tennis</h4>
                                                     <ul class="mega_item_2">
                                                         <li><a href="shop.html">stadium 1</a></li>
@@ -188,11 +191,11 @@
                                         </li>
                                        
 
-                                        <li><a href="service.html">Login</a></li>
-                                        <li><a href="service.html">Register</a></li>
-                                        <li><a href="service.html">About</a></li>
-                                        <li><a href="contact.html">contact us </a></li>
-                                        <li class="menu-item-has-children"><a href="blog.html">Profile</a>
+                                        <li><a href="/login">Login</a></li>
+                                        <li><a href="/register">Register</a></li>
+                                        <li><a href="about">About</a></li>
+                                        <li><a href="/contact">contact us </a></li>
+                                        <li class="menu-item-has-children"><a href="/profile">Profile</a>
                                             <ul class="sub-menu">
                                                 <li><a href="blog-grid.html">Account</a></li>
                                                 <li><a href="blog-large.html">Log out</a></li>
@@ -224,7 +227,7 @@
                         <h3 class="mb-40">Shopping cart</h3>
                         <div class="add_cart_product">
                             <div class="add_cart_product__thumb">
-                                <img src="assets/img/product/29-3.jpg" alt="">
+                                <img src={{asset("assets/img/product/29-3.jpg")}} alt="">
                             </div>
                             <div class="add_cart_product__content">
                                 <h5><a href="shop.html">Running 3-Stripes</a></h5>

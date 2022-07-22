@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\categorise;
+use App\Http\Controllers\staduimsController;
+use App\Http\Controllers\mainController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,17 +15,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/',[mainController::class,'index']);
+
+Route::get('/single/{title}',[mainController::class,'single']);
+
+
 
 Route::get('/stadiums', function () {
     return view('stadiums');
 });
 
-Route::get('/single', function () {
-    return view('single');
-});
+// Route::get('/single/{title}', function () {
+
+//     return view('single');
+// });
 
 Route::get('/sun', function () {
     return view('welcome');
@@ -41,10 +50,48 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-
 Route::get('/edit', function () {
     return view('edit');
 });
 
+Route::get('/book', function () {
+    return view('book');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/about', function () {
+    return view('About');
+});
 
 
+
+
+
+
+
+
+/////////   sus dashboard   //////
+
+Route::get('/dash', function () {
+    return view('manage.dash');
+});
+
+// categorise admin dashboard
+Route::get('dash-categorise',[categorise::class,'index']);
+Route::post('add-categorise',[categorise::class,'add']);
+Route::get('edit-categorise/{id}',[categorise::class,'edit']);
+Route::post('update',[categorise::class,'update'])->name('update');
+Route::post('delete-categorise',[categorise::class,'delete']);
+
+
+
+
+// stadiums admin dashboard
+Route::get('dash-Stadiums',[staduimsController::class,'index']);
+Route::post('add-stadiums',[staduimsController::class,'add']);
+Route::get('edit-stadiums/{id}',[staduimsController::class,'edit']);
+Route::post('update',[staduimsController::class,'update'])->name('update');
+Route::post('delete-stadiums',[staduimsController::class,'delete']);

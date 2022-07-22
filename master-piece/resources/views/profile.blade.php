@@ -26,7 +26,7 @@
                         </div>
                         <div class="checkout__wrap">
                             <h6>User Email </h6>
-                            <h5><b>mail@gmail.com</b> </h5>
+                            <h5><b>mail@gmail.com</b></h5>
                         </div>
 
 
@@ -36,12 +36,12 @@
                         </div>
 
                         <div class="checkout__wrap">
-                            <button class="btn">edit</button>
+                            <a href="/edit" class="btn">edit</a>
                         </div>
 
-
-
                     </div>
+
+
                 </div>
                 <div class="col-10 mb-2">
                     <div class="cart__acount ">
@@ -115,7 +115,7 @@
 
                     </div>
                 </div>
-                <div class="flex-row-reverse " >
+                <div class="flex-row-reverse ">
                     <div class="cart__acount ">
                         <h5>Books History</h5>
 

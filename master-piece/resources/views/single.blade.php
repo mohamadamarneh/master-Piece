@@ -1,5 +1,12 @@
 @extends('layout.main')
+
 @section('content')
+    @php
+
+    $date = date('Y-m-d');
+
+    @endphp
+
     <!-- single_breadcrumb_area start -->
     <div class="single_breadcrumb pt-25">
         <div class="container">
@@ -13,23 +20,24 @@
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
                                                 data-bs-target="#homde" type="button" role="tab"
-                                                aria-selected="true"><img src="img/product/17.jpg" alt=""></button>
+                                                aria-selected="true"><img src={{asset("imagesadd/$info->picture_two")}} alt=""></button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
                                                 data-bs-target="#profidfdle" type="button" role="tab"
-                                                aria-selected="false"><img src="img/product/17-1.jpg"
+                                                aria-selected="false"><img src={{asset("imagesadd/$info->picture")}}
                                                     alt=""></button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" data-bs-toggle="tab" data-bs-target="#contadfdct"
                                                 type="button" role="tab" aria-selected="false"><img
-                                                    src="img/product/17-2.jpg" alt=""></button>
+                                                    src={{asset("imagesadd/$info->picture")}} 
+                                                    alt=""></button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="kids-tab" data-bs-toggle="tab"
                                                 data-bs-target="#kidsdfd" type="button" role="tab"
-                                                aria-selected="false"><img src="img/product/17-3.jpg"
+                                                aria-selected="false"><img src={{asset("imagesadd/$info->picture")}}
                                                     alt=""></button>
                                         </li>
                                     </ul>
@@ -39,27 +47,27 @@
                         <div class="col-xl-10 col-lg-10 col-md-10">
                             <div class="single_preview_product">
                                 <div class="single-popup-view">
-                                    <a class="popup-image" href="img/product/17-3.jpg"><i class="fal fa-search"></i></a>
+                                    <a class="popup-image" href='imagesadd/{{$info->picture}}' ><i class="fal fa-search"></i></a>
                                 </div>
                                 <div class="tab-content" id="myTabefContent">
                                     <div class="tab-pane fade show active" id="homde" role="tabpanel">
                                         <div class="full-view">
-                                            <img src="img/product/17.jpg" alt="">
+                                            <img src={{asset("imagesadd/$info->picture_two")}} alt="" style='width : 100%;' >
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="profidfdle" role="tabpanel">
                                         <div class="full-view">
-                                            <img src="img/product/17-1.jpg" alt="">
+                                            <img src={{asset("imagesadd/$info->picture")}} alt="" style='width : 100%;'>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="contadfdct" role="tabpanel">
                                         <div class="full-view">
-                                            <img src="img/product/17-2.jpg" alt="">
+                                            <img src={{asset("imagesadd/$info->picture")}} alt="" style='width : 100%;'> 
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="kidsdfd" role="tabpanel">
                                         <div class="full-view">
-                                            <img src="img/product/17-3.jpg" alt="">
+                                            <img src={{asset("imagesadd/$info->picture")}} alt="" style='width : 100%;'>
                                         </div>
                                     </div>
                                 </div>
@@ -69,38 +77,75 @@
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12">
                     <div class="single_preview_content pl-30">
-                        <h2 class="title-5 edit-title border-bottom-0">Arsenal Home Jersey</h2>
-                        <div class="s-product-review">
+                        <h2 class="title-5 edit-title border-bottom-0">{{$info->title}} Stadiom </h2>
+
+                        {{-- <div class="s-product-review">
                             <span><i class="far fa-star start-color"></i></span>
                             <span><i class="far fa-star start-color"></i></span>
                             <span><i class="far fa-star start-color"></i></span>
                             <span><i class="far fa-star start-color"></i></span>
                             <span><i class="far fa-star"></i></span>
                             <span class="pl-left">(1 customer review)</span>
-                        </div>
+                        </div> --}}
+
                         <div class="s-price pt-30 mb-30">
-                            <span>$45.00</span>
+                            <span>JOD {{$info->price}} /Hour</span>
                         </div>
                         <div class="s-des">
-                            <p>Designed by Hans J. Wegner in 1949 as one of the first models created especially for Carl
-                                Hansen & Son, and produced since 1950. The last of a series of chairs Wegner designed based
-                                on inspiration from antique Chinese armchairs. The gently rounded top together with the back
-                                and seat offers a</p>
+                            <p>Location: {{$info->address}}</p>
                         </div>
+                        <div class="s-des">
+                            <p><b>Phone:</b> 0778090543</p>
+                        </div>
+                        <div class="s-des">
+                            <p>{{$info->description}}</p>
+                        </div>
+
                         <div class="viewcontent__action single_action pt-30">
-                            <span><input type="number" placeholder="1"></span>
-                            <span><a href="cart.html"> Book Now</a></span>
+                            <span>
+                               
+                                    <input type="date" min="@php echo  date("Y-m-d") @endphp"
+                                        value="@php echo  date("Y-m-d") @endphp" max="@php echo  date("Y-m-d"
+                                        ,strtotime($date .'+3 days')) @endphp" id="birthdaytime" name="birthdaytime"
+                                        style="width: 150px">
+                                </i>
+                            </span>
+
+                            <span>
+                                <select id="birthdaytime" name="birthdaytime" class="form-control" style="height: 50px">
+                                    <option value="">07:00 - 09:00</option>
+                                    <option value="">09:00 - 11:00</option>
+                                    <option value="">01:00 - 03:00</option>
+                                    <option value="">03:00 - 05:00</option>
+                                    <option value="">05:00 - 07:00</option>
+                                    <option value="">07:00 - 09:00</option>
+                                    <option value="">09:00 - 11:00</option>
+                                </select>
+                            </span>
+
+                            <span><a href="/book"> Book Now</a></span>
                             <span><i class="fal fa-heart"></i></span>
-                            <span><i class="fas fa-compress"></i></span>
+                           
                         </div>
+
+
+
+
+                        <div class="viewcontent__action single_action pt-30">
+
+                            {{-- <span><input type="date" min="@php echo  date("Y-m-d")  @endphp" value="@php echo  date("Y-m-d")  @endphp"  max="@php echo  date("Y-m-d" ,strtotime($date .'+3 days'))  @endphp" id="birthdaytime" name="birthdaytime"></i></span> --}}
+                            {{-- <input type="date" min="@php echo  date("Y-m-d")  @endphp" value="@php echo  date("Y-m-d")  @endphp"  max="@php echo  date("Y-m-d" ,strtotime($date .'+3 days'))  @endphp" id="birthdaytime" name="birthdaytime"> --}}
+                        </div>
+
                         <div class="viewcontent__footer border-top-0 border-bottom pb-30">
                             <ul>
-                                <li>Category:</li>
-                                <li>SKU:</li>
+                                <li>Category:{{$info->categorises_id}}</li>
+
                             </ul>
                             <ul>
-                                <li>jackets, Youth</li>
-                                <li>woo-hoodie-with-logo</li>
+
+                                <li>irbid, descount</li>
+
                             </ul>
                         </div>
                         {{-- <div class="social__media f-social-media mb-30 pt-15">
@@ -119,7 +164,7 @@
     <!-- single_breadcrumb_area end -->
 
 
-    <ul class="nav nav-tabs justify-content-center" id="myerTab" role="tablist">
+    {{-- <ul class="nav nav-tabs justify-content-center" id="myerTab" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="home-tab3" data-bs-toggle="tab" data-bs-target="#Description"
                 type="button" role="tab" aria-selected="true">Description</button>
@@ -132,13 +177,13 @@
             <button class="nav-link" data-bs-toggle="tab" data-bs-target="#Reviews" type="button" role="tab"
                 aria-selected="false">Reviews (1)</button>
         </li>
-    </ul>
+    </ul> --}}
 
 
 
 
 
-    <div class="row">
+    <div class="row container">
         <div class="col-xl-8 col-lg-8 col-md-8 offset-xl-2">
             <div class="product__reviews_comment pt-150">
                 <p>1 review for Detail V-Neck Sweater</p>
@@ -177,25 +222,7 @@
                         <label>Your Review *</label>
                         <textarea name="review"></textarea>
                     </div>
-                    <div class="review__wrap">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6">
-                                <label>Name <span>*</span></label>
-                                <input type="text" name="fname">
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6">
-                                <div class="review__wrap">
-                                    <label>Email <span>*</span></label>
-                                    <input type="text" name="email">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review__wrap_2">
-                        <input type="checkbox" name="email">
-                        <span class="pt-10 pb-10">Save my name, email, and website in this browser for the next time I
-                            comment.</span>
-                    </div>
+
                     <div class="review__wrap pt-15">
                         <button type="submit">submit</button>
                     </div>
@@ -207,14 +234,6 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
-
 
     <!-- categories area start -->
     <div class="categories_area pt-85 mb-150">
@@ -353,8 +372,8 @@
                                                                 alt="product_image">
                                                         </a>
                                                         <!-- <div class="product__update">
-                                                                            <a class="#">new</a>
-                                                                        </div> -->
+                                                                                            <a class="#">new</a>
+                                                                                        </div> -->
                                                         <div class="product-info mb-10">
                                                             <div class="product_category">
                                                                 <span>Shoes, Clothing</span>
@@ -397,9 +416,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
-
                                         </div>
                                     </div>
                                 </div>
