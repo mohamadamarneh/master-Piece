@@ -189,19 +189,28 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                       
 
-                                        <li><a href="/login">Login</a></li>
-                                        <li><a href="/register">Register</a></li>
-                                        <li><a href="about">About</a></li>
-                                        <li><a href="/contact">contact us </a></li>
+
+                                        @if (Session::get('username'))
                                         <li class="menu-item-has-children"><a href="/profile">Profile</a>
                                             <ul class="sub-menu">
                                                 <li><a href="blog-grid.html">Account</a></li>
-                                                <li><a href="blog-large.html">Log out</a></li>
+                                                <li>
+                                                    
+                                                    <a href="logout">Log out</a></li>
                 
                                             </ul>
                                         </li>
+
+                                            
+                                        @else
+                                        <li><a href="/login">Login</a></li>
+                                        <li><a href="/register">Register</a></li>
+                                        @endif
+                                        
+                                        <li><a href="about">About</a></li>
+                                        <li><a href="/contact">contact us </a></li>
+                                       
                                     </ul>
                                 </nav>
                             </div>

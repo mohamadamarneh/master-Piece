@@ -9,20 +9,38 @@
                 <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 offset-xl-1">
                     <h3 class="title-7">Login</h3>
                     <div class="login_wrapper" style="padding: 40px 75px;">
-                        <form action="#">
+                        @if (Session::get('fail'))
+                            <div class="alert alert-success p-2" role="alert">
+                                {{ Session::get('fail') }}
+                            </div>
+                        @endif
+
+                        <form action="{{route('logincheck')}}" method="POST">
+                            @csrf
+
                             <div class="input_wrap">
                                 <label>Email address <span>*</span></label>
-                                <input type="email">
+                                <input type="email" name="email" value="{{ old('name') }}">
                             </div>
+                            @error('email')
+                                <div>
+                                    <p class="text-danger">* {{ $message }}</p>
+                                </div>
+                            @enderror
                             <div class="input_wrap">
                                 <label>Password<span>*</span></label>
-                                <input type="password">
+                                <input type="password" name="password">
                                 <span class="show-pass"><i class="far fa-eye-slash"></i></span>
                             </div>
-                            <div class="input_wrapp-2">
+                            @error('password')
+                                <div>
+                                    <p class="text-danger">* {{ $message }}</p>
+                                </div>
+                            @enderror
+                            {{-- <div class="input_wrapp-2">
                                 <input type="checkbox" name="check">
                                 <span>Remember me </span>
-                            </div>
+                            </div> --}}
                             <div class="input_wrap">
                                 <button type="submit">log in</button>
                             </div>

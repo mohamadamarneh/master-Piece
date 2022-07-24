@@ -20,24 +20,24 @@
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
                                                 data-bs-target="#homde" type="button" role="tab"
-                                                aria-selected="true"><img src={{asset("imagesadd/$info->picture_two")}} alt=""></button>
+                                                aria-selected="true"><img src={{ asset("imagesadd/$info->picture_two") }}
+                                                    alt=""></button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
                                                 data-bs-target="#profidfdle" type="button" role="tab"
-                                                aria-selected="false"><img src={{asset("imagesadd/$info->picture")}}
+                                                aria-selected="false"><img src={{ asset("imagesadd/$info->picture") }}
                                                     alt=""></button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" data-bs-toggle="tab" data-bs-target="#contadfdct"
                                                 type="button" role="tab" aria-selected="false"><img
-                                                    src={{asset("imagesadd/$info->picture")}} 
-                                                    alt=""></button>
+                                                    src={{ asset("imagesadd/$info->picture") }} alt=""></button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="kids-tab" data-bs-toggle="tab"
                                                 data-bs-target="#kidsdfd" type="button" role="tab"
-                                                aria-selected="false"><img src={{asset("imagesadd/$info->picture")}}
+                                                aria-selected="false"><img src={{ asset("imagesadd/$info->picture") }}
                                                     alt=""></button>
                                         </li>
                                     </ul>
@@ -47,27 +47,32 @@
                         <div class="col-xl-10 col-lg-10 col-md-10">
                             <div class="single_preview_product">
                                 <div class="single-popup-view">
-                                    <a class="popup-image" href='imagesadd/{{$info->picture}}' ><i class="fal fa-search"></i></a>
+                                    <a class="popup-image" href='imagesadd/{{ $info->picture }}'><i
+                                            class="fal fa-search"></i></a>
                                 </div>
                                 <div class="tab-content" id="myTabefContent">
                                     <div class="tab-pane fade show active" id="homde" role="tabpanel">
                                         <div class="full-view">
-                                            <img src={{asset("imagesadd/$info->picture_two")}} alt="" style='width : 100%;' >
+                                            <img src={{ asset("imagesadd/$info->picture_two") }} alt=""
+                                                style='width : 100%;'>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="profidfdle" role="tabpanel">
                                         <div class="full-view">
-                                            <img src={{asset("imagesadd/$info->picture")}} alt="" style='width : 100%;'>
+                                            <img src={{ asset("imagesadd/$info->picture") }} alt=""
+                                                style='width : 100%;'>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="contadfdct" role="tabpanel">
                                         <div class="full-view">
-                                            <img src={{asset("imagesadd/$info->picture")}} alt="" style='width : 100%;'> 
+                                            <img src={{ asset("imagesadd/$info->picture") }} alt=""
+                                                style='width : 100%;'>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="kidsdfd" role="tabpanel">
                                         <div class="full-view">
-                                            <img src={{asset("imagesadd/$info->picture")}} alt="" style='width : 100%;'>
+                                            <img src={{ asset("imagesadd/$info->picture") }} alt=""
+                                                style='width : 100%;'>
                                         </div>
                                     </div>
                                 </div>
@@ -77,7 +82,7 @@
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12">
                     <div class="single_preview_content pl-30">
-                        <h2 class="title-5 edit-title border-bottom-0">{{$info->title}} Stadiom </h2>
+                        <h2 class="title-5 edit-title border-bottom-0">{{ $info->title }} Stadiom </h2>
 
                         {{-- <div class="s-product-review">
                             <span><i class="far fa-star start-color"></i></span>
@@ -89,25 +94,24 @@
                         </div> --}}
 
                         <div class="s-price pt-30 mb-30">
-                            <span>JOD {{$info->price}} /Hour</span>
+                            <span>JOD {{ $info->price }} /Hour</span>
                         </div>
                         <div class="s-des">
-                            <p>Location: {{$info->address}}</p>
+                            <p>Location: {{ $info->address }}</p>
                         </div>
                         <div class="s-des">
                             <p><b>Phone:</b> 0778090543</p>
                         </div>
                         <div class="s-des">
-                            <p>{{$info->description}}</p>
+                            <p>{{ $info->description }}</p>
                         </div>
 
                         <div class="viewcontent__action single_action pt-30">
                             <span>
-                               
-                                    <input type="date" min="@php echo  date("Y-m-d") @endphp"
-                                        value="@php echo  date("Y-m-d") @endphp" max="@php echo  date("Y-m-d"
-                                        ,strtotime($date .'+3 days')) @endphp" id="birthdaytime" name="birthdaytime"
-                                        style="width: 150px">
+
+                                <input type="date" min="@php echo  date("Y-m-d") @endphp" value="@php echo  date("Y-m-d")
+                                    @endphp" max="@php echo  date("Y-m-d" ,strtotime($date .'+3 days')) @endphp"
+                                    id="birthdaytime" name="birthdaytime" style="width: 150px">
                                 </i>
                             </span>
 
@@ -125,7 +129,7 @@
 
                             <span><a href="/book"> Book Now</a></span>
                             <span><i class="fal fa-heart"></i></span>
-                           
+
                         </div>
 
 
@@ -139,7 +143,7 @@
 
                         <div class="viewcontent__footer border-top-0 border-bottom pb-30">
                             <ul>
-                                <li>Category:{{$info->categorises_id}}</li>
+                                <li>Category:{{ $info->categorises_id }}</li>
 
                             </ul>
                             <ul>
@@ -192,6 +196,28 @@
                         <img src="img/desc/team2-60x60.png" alt="">
                     </div>
                     <div class="user__content">
+                        <h4>admin<span> – July 13, 2020: {{ $info->id }}</span></h4>
+                        <span>
+                            <a href="#"><i class="fal fa-star start-color"></i></a>
+                            <a href="#"><i class="fal fa-star start-color"></i></a>
+                            <a href="#"><i class="fal fa-star start-color"></i></a>
+                            <a href="#"><i class="fal fa-star start-color"></i></a>
+                            <a href="#"><i class="fal fa-star start-color"></i></a>
+                        </span>
+                        <p>Designed by Hans J. Wegner in 1949 as one of the first models created especially for Carl Hansen
+                            & Son, and produced since 1950. The last of a series of chairs Wegner designed based on
+                            inspiration from antique
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="user_design">
+                    <div class="user__thumb">
+                        <img src="img/desc/team2-60x60.png" alt="">
+                    </div>
+                    <div class="user__content mt-3">
                         <h4>admin<span> – July 13, 2020: </span></h4>
                         <span>
                             <a href="#"><i class="fal fa-star start-color"></i></a>
@@ -206,6 +232,36 @@
                         </p>
                     </div>
                 </div>
+
+
+
+
+
+                @foreach ($singlecomments as $single)
+                    <div class="user_design mt-3" >
+                        <div class="user__thumb">
+                            <img src="img/desc/team2-60x60.png" alt="">
+                        </div>
+                        <div class="user__content">
+                            <h4> {{$single->username}} <span>  {{$single->created_at}} </span></h4>
+                            <span>
+                                <a href="#"><i class="fal fa-star start-color"></i></a>
+                                <a href="#"><i class="fal fa-star start-color"></i></a>
+                                <a href="#"><i class="fal fa-star start-color"></i></a>
+                                <a href="#"><i class="fal fa-star start-color"></i></a>
+                                <a href="#"><i class="fal fa-star start-color"></i></a>
+                            </span>
+                            <p>{{$single->comment}}
+                            </p>
+                        </div>
+                    </div>
+                @endforeach
+
+
+
+
+
+
             </div>
             <h4 class="pt-60 mb-25 add_review">Add a review </h4>
             <h4 class="mb-25 rating-title">Your Rating</h4>
@@ -372,8 +428,8 @@
                                                                 alt="product_image">
                                                         </a>
                                                         <!-- <div class="product__update">
-                                                                                            <a class="#">new</a>
-                                                                                        </div> -->
+                                                                                                <a class="#">new</a>
+                                                                                            </div> -->
                                                         <div class="product-info mb-10">
                                                             <div class="product_category">
                                                                 <span>Shoes, Clothing</span>

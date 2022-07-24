@@ -197,12 +197,9 @@
                                         <div class="swiper-wrapper">
 
 
-
-
                                             @foreach ($list as $item)
                                                 
-                                           
-
+                                    
                                             <div class="product-item swiper-slide wow fadeInUp" data-wow-duration="1s"
                                                 data-wow-delay="0.2s">
                                                 <div class="product">
@@ -236,7 +233,7 @@
                                                         <div class="product__name">
                                                             <h4><a href="shop.html">{{$item->title}}</a></h4>
                                                             <div class="pro-price">
-                                                                <p class="p-absoulute pr-1"><span>JOD {{$item->title}}</span>
+                                                                <p class="p-absoulute pr-1"><span>JOD {{$item->price}}</span>
                                                                     <span>/</span> Hour</p>
                                                                 <a class="p-absoulute pr-2" href="#">Book now</a>
                                                             </div>

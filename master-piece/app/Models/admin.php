@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class comments extends Model
+class admin extends Model
 {
     use HasFactory;
-   protected $fillable=[
-    'username',
-    'comment',
-    'product_id',
-    'created_at'
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
     ];
 }
