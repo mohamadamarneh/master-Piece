@@ -99,8 +99,8 @@
                         <label class="form-check-label" for="exampleCheck1">Trainer</label>
                       </div>
                       <div class="form-check">
-                        <input type="checkbox" value="1" name="wears_A" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Wears</label>
+                        <input type="checkbox" value="1" name="wears_A" class="form-check-input" id="exampleCheck2">
+                        <label class="form-check-label" for="exampleCheck2">Wears</label>
                       </div>
                 </div>
                 <div class="col">

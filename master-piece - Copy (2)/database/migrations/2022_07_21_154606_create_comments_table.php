@@ -18,7 +18,7 @@ class CreateCommentsTable extends Migration
             $table->string('username');
             $table->string('name')->nullable();
             $table->text('comment');
-            $table->foreignId('product_id')->nullable()->constrained('products')->onDelete('cascade');
+            $table->foreignId('product_id')->nullable()->constrained('products')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
             
         });

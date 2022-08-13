@@ -28,6 +28,8 @@ use App\Http\Controllers\bookController;
 //     return view('index');
 // });
 
+
+
 Route::get('/',[mainController::class,'index']);
 
 Route::get('/single/{title}',[mainController::class,'single']);
@@ -35,16 +37,20 @@ Route::get('/single/{title}',[mainController::class,'single']);
 
 
 
-Route::post('add-costumer',[mainController::class,'register'])->name('accsept');
+
 
 
 Route::get('logout',[mainController::class,'logout']);
 
 
+Route::get('addcomment',[mainController::class,'addcomment']);
+
+
+Route::post('logincheckuser',[mainController::class,'logincheckuser']);
 
 Route::group(['middleware'=>'Authcheck'],function(){
-
-    Route::post('logincheck',[mainController::class,'logincheck']);
+    Route::post('add-costumer',[mainController::class,'register'])->name('accsept');
+    
     Route::get('/register',[mainController::class,'registerpage']);
     Route::get('/login',[mainController::class,'login']);
 
@@ -53,12 +59,16 @@ Route::group(['middleware'=>'Authcheck'],function(){
 
 
 
-Route::get('/stadiums', function () {
-    return view('stadiums');
-});
+
+
+
+Route::get('/stadiums',[mainController::class,'shop']);
+
+// Route::get('/stadiums', function () {
+//     return view('stadiums');
+// });
 
 // Route::get('/single/{title}', function () {
-
 //     return view('single');
 // });
 
@@ -101,7 +111,7 @@ Route::get('/about', function () {
 
 
 
-/////////   sus dashboard   //////
+/////////   admin dashboard   //////
 
 Route::get('/dash', function () {
     return view('manage.dash');
@@ -109,7 +119,7 @@ Route::get('/dash', function () {
 
 Route::post('logincheck',[AdminController::class,'logincheck']);
 
-Route::get('dash/logout',[AdminController::class,'logout']);
+Route::post('dash/logout',[AdminController::class,'logout']);
 
 Route::get('dash-login',[AdminController::class,'login']);
 

@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row gx-5">
                 <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 offset-xl-1">
-                    <h3 class="title-7">Login</h3>
+                    <h3 class="title-7">profile</h3>
                     <div class="login_wrapper" style="padding: 40px 75px;">
                         <form action="#">
                             <div class="input_wrap">

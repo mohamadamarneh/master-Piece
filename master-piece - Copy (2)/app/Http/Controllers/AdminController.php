@@ -14,6 +14,12 @@ class AdminController extends Controller
 
     }
 
+
+    
+
+
+
+
     function logout(){
         if(session()->has('adminname')){
             

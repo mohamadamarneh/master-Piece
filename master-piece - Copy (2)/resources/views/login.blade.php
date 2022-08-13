@@ -10,17 +10,17 @@
                     <h3 class="title-7">Login</h3>
                     <div class="login_wrapper" style="padding: 40px 75px;">
                         @if (Session::get('fail'))
-                            <div class="alert alert-success p-2" role="alert">
+                            <div class=" p-2 text-danger">
                                 {{ Session::get('fail') }}
                             </div>
                         @endif
 
-                        <form action="{{route('logincheck')}}" method="POST">
+                        <form action="logincheckuser" method="POST">
                             @csrf
 
                             <div class="input_wrap">
                                 <label>Email address <span>*</span></label>
-                                <input type="email" name="email" value="{{ old('name') }}">
+                                <input type="text" name="email" value="{{ old('email') }}">
                             </div>
                             @error('email')
                                 <div>

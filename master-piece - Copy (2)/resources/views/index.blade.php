@@ -93,7 +93,7 @@
                         </div>
                         <div class="col-xl-7 offset-xl-1 col-lg-8 col-md-8 col-sm-12 d-none d-lg-block">
                             <div class="slider_image_3">
-                                <img src="img/slider/slider-img-3.png" alt="">
+                                {{-- <img src="img/slider/slider-img-3.png" alt=""> --}}
                             </div>
                         </div>
                     </div>
@@ -198,67 +198,65 @@
 
 
                                             @foreach ($list as $item)
-                                                
-                                    
-                                            <div class="product-item swiper-slide wow fadeInUp" data-wow-duration="1s"
-                                                data-wow-delay="0.2s">
-                                                <div class="product">
-                                                    <div class="product__thumb">
-                                                        <a href="/single/{{$item->title}}">
-                                                            <img class="product-primary "  style="width: 100%;"
-                                                                src="imagesadd/{{$item->picture}}"
-                                                                alt="product_image">
-                                                            <img class="product-secondary" style="width: 100%;"
-                                                                src="imagesadd/{{$item->picture_two}}"
-                                                                alt="product_image">
-                                                        </a>
-                                                        <div class="product__update">
-                                                            <a class="#">new</a>
-                                                        </div>
-                                                        <div class="product-info mb-10">
-                                                            <div class="product_category">
-                                                                <span>{{$item->address}}</span>
+                                                <div class="product-item swiper-slide wow fadeInUp" data-wow-duration="1s"
+                                                    data-wow-delay="0.2s">
+                                                    <div class="product">
+                                                        <div class="product__thumb">
+                                                            <a href="/single/{{ $item->title }}">
+                                                                <img class="product-primary " style="width: 100%;"
+                                                                    src="imagesadd/{{ $item->picture }}"
+                                                                    alt="product_image">
+                                                                <img class="product-secondary" style="width: 100%;"
+                                                                    src="imagesadd/{{ $item->picture_two }}"
+                                                                    alt="product_image">
+                                                            </a>
+                                                            <div class="product__update">
+                                                                <a class="#">new</a>
                                                             </div>
-                                                            <div class="product_rating">
-                                                                <a href="#"><i
-                                                                        class="fal fa-star start-color"></i></a>
-                                                                <a href="#"><i
-                                                                        class="fal fa-star start-color"></i></a>
-                                                                <a href="#"><i
-                                                                        class="fal fa-star start-color"></i></a>
-                                                                <a href="#"><i class="fal fa-star"></i></a>
-                                                                <a href="#"><i class="fal fa-star"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product__name">
-                                                            <h4><a href="shop.html">{{$item->title}}</a></h4>
-                                                            <div class="pro-price">
-                                                                <p class="p-absoulute pr-1"><span>JOD {{$item->price}}</span>
-                                                                    <span>/</span> Hour</p>
-                                                                <a class="p-absoulute pr-2" href="#">Book now</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product__action">
-                                                            <div class="inner__action">
-                                                                <div class="wishlist">
-                                                                    <a href="#"><i class="fal fa-heart"></i></a>
+                                                            <div class="product-info mb-10">
+                                                                <div class="product_category">
+                                                                    <span>{{ $item->address }}</span>
                                                                 </div>
-                                                                <div class="view">
-                                                                    <a href="javascript:void(0)"><i
-                                                                            class="fal fa-eye"></i></a>
-                                                                </div>
-                                                                <div class="layer">
+                                                                <div class="product_rating">
                                                                     <a href="#"><i
-                                                                            class="fal fa-layer-group"></i></a>
+                                                                            class="fal fa-star start-color"></i></a>
+                                                                    <a href="#"><i
+                                                                            class="fal fa-star start-color"></i></a>
+                                                                    <a href="#"><i
+                                                                            class="fal fa-star start-color"></i></a>
+                                                                    <a href="#"><i class="fal fa-star"></i></a>
+                                                                    <a href="#"><i class="fal fa-star"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product__name">
+                                                                <h4><a href="shop.html">{{ $item->title }}</a></h4>
+                                                                <div class="pro-price">
+                                                                    <p class="p-absoulute pr-1"><span>JOD
+                                                                            {{ $item->price }}</span>
+                                                                        <span>/</span> Hour
+                                                                    </p>
+                                                                    <a class="p-absoulute pr-2" href="#">Book
+                                                                        now</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product__action">
+                                                                <div class="inner__action">
+                                                                    <div class="wishlist">
+                                                                        <a href="#"><i class="fal fa-heart"></i></a>
+                                                                    </div>
+                                                                    <div class="view">
+                                                                        <a href="javascript:void(0)"><i
+                                                                                class="fal fa-eye"></i></a>
+                                                                    </div>
+                                                                    <div class="layer">
+                                                                        <a href="#"><i
+                                                                                class="fal fa-layer-group"></i></a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-
-
-
                                             @endforeach
 
 
@@ -298,7 +296,8 @@
                                                             <h4><a href="shop.html">Zabda republic stadium </a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$15</span>
-                                                                    <span>per</span> hour</p>
+                                                                    <span>per</span> hour
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">Book now</a>
                                                             </div>
                                                         </div>
@@ -331,8 +330,8 @@
                                                                 alt="product_image">
                                                         </a>
                                                         <!-- <div class="product__update">
-                                                            <a class="#">new</a>
-                                                        </div> -->
+                                                                        <a class="#">new</a>
+                                                                    </div> -->
                                                         <div class="product-info mb-10">
                                                             <div class="product_category">
                                                                 <span>Shoes, Clothing</span>
@@ -352,7 +351,8 @@
                                                             <h4><a href="shop.html">kkr video show BG</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -406,7 +406,8 @@
                                                             <h4><a href="shop.html">Dikko Mens show kite</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -460,7 +461,8 @@
                                                             <h4><a href="shop.html">Prestige show new BR</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -514,7 +516,8 @@
                                                             <h4><a href="shop.html">mnr digo kite line</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -568,7 +571,8 @@
                                                             <h4><a href="shop.html">Fly Sandal For Children</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -599,6 +603,87 @@
                                 <div class="container">
                                     <div class="product-active swiper-container">
                                         <div class="swiper-wrapper">
+
+
+
+
+
+                                            @foreach ($list as $item)
+                                                @if ($item->categorises_id == 1)
+                                                    <div class="product-item swiper-slide" data-wow-duration="1s"
+                                                        data-wow-delay="0.2s">
+                                                        <div class="product">
+                                                            <div class="product__thumb">
+                                                                <a href="/single/{{ $item->title }}">
+                                                                    <img class="product-primary " style="width: 100%;"
+                                                                        src="imagesadd/{{ $item->picture }}"
+                                                                        alt="product_image">
+                                                                    <img class="product-secondary" style="width: 100%;"
+                                                                        src="imagesadd/{{ $item->picture_two }}"
+                                                                        alt="product_image">
+                                                                </a>
+                                                                <div class="product__update">
+                                                                    <a class="#">new</a>
+                                                                </div>
+                                                                <div class="product-info mb-10">
+                                                                    <div class="product_category">
+                                                                        <span>{{ $item->address }}</span>
+                                                                    </div>
+                                                                    <div class="product_rating">
+                                                                        <a href="#"><i
+                                                                                class="fal fa-star start-color"></i></a>
+                                                                        <a href="#"><i
+                                                                                class="fal fa-star start-color"></i></a>
+                                                                        <a href="#"><i
+                                                                                class="fal fa-star start-color"></i></a>
+                                                                        <a href="#"><i class="fal fa-star"></i></a>
+                                                                        <a href="#"><i class="fal fa-star"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product__name">
+                                                                    <h4><a href="shop.html">{{ $item->title }}</a></h4>
+                                                                    <div class="pro-price">
+                                                                        <p class="p-absoulute pr-1"><span>JOD
+                                                                                {{ $item->price }}</span>
+                                                                            <span>/</span> Hour
+                                                                        </p>
+                                                                        <a class="p-absoulute pr-2" href="#">Book
+                                                                            now</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product__action">
+                                                                    <div class="inner__action">
+                                                                        <div class="wishlist">
+                                                                            <a href="#"><i
+                                                                                    class="fal fa-heart"></i></a>
+                                                                        </div>
+                                                                        <div class="view">
+                                                                            <a href="javascript:void(0)"><i
+                                                                                    class="fal fa-eye"></i></a>
+                                                                        </div>
+                                                                        <div class="layer">
+                                                                            <a href="#"><i
+                                                                                    class="fal fa-layer-group"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endforeach
+
+
+
+
+
+
+
+
+
+
+
+
                                             <div class="product-item swiper-slide">
                                                 <div class="product">
                                                     <div class="product__thumb">
@@ -630,7 +715,8 @@
                                                             <h4><a href="single.html">Thong For Women</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -684,7 +770,8 @@
                                                             </h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -716,8 +803,8 @@
                                                                 alt="product_image">
                                                         </a>
                                                         <!-- <div class="product__update">
-                                                            <a class="#">new</a>
-                                                        </div> -->
+                                                                        <a class="#">new</a>
+                                                                    </div> -->
                                                         <div class="product-info mb-10">
                                                             <div class="product_category">
                                                                 <span>Shoes, Clothing</span>
@@ -737,7 +824,8 @@
                                                             <h4><a href="shop.html">post Sandal For Women</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -790,7 +878,8 @@
                                                             <h4><a href="shop.html">Black Clara Maria High</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -843,7 +932,8 @@
                                                             <h4><a href="shop.html">Beautiful Smiley Sneakers</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -896,7 +986,8 @@
                                                             <h4><a href="shop.html">Flip Flop 2 Inch Heel</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -927,6 +1018,97 @@
                                 <div class="container">
                                     <div class="product-active h-2-product-active swiper-container">
                                         <div class="swiper-wrapper">
+
+
+
+
+
+
+
+
+                                            @foreach ($list as $item)
+                                                @if ($item->categorises_id == 2)
+                                                    <div class="product-item swiper-slide" data-wow-duration="1s"
+                                                        data-wow-delay="0.2s">
+                                                        <div class="product">
+                                                            <div class="product__thumb">
+                                                                <a href="/single/{{ $item->title }}">
+                                                                    <img class="product-primary " style="width: 100%;"
+                                                                        src="imagesadd/{{ $item->picture }}"
+                                                                        alt="product_image">
+                                                                    <img class="product-secondary" style="width: 100%;"
+                                                                        src="imagesadd/{{ $item->picture_two }}"
+                                                                        alt="product_image">
+                                                                </a>
+                                                                <div class="product__update">
+                                                                    <a class="#">new</a>
+                                                                </div>
+                                                                <div class="product-info mb-10">
+                                                                    <div class="product_category">
+                                                                        <span>{{ $item->address }}</span>
+                                                                    </div>
+                                                                    <div class="product_rating">
+                                                                        <a href="#"><i
+                                                                                class="fal fa-star start-color"></i></a>
+                                                                        <a href="#"><i
+                                                                                class="fal fa-star start-color"></i></a>
+                                                                        <a href="#"><i
+                                                                                class="fal fa-star start-color"></i></a>
+                                                                        <a href="#"><i class="fal fa-star"></i></a>
+                                                                        <a href="#"><i class="fal fa-star"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product__name">
+                                                                    <h4><a href="shop.html">{{ $item->title }}</a></h4>
+                                                                    <div class="pro-price">
+                                                                        <p class="p-absoulute pr-1"><span>JOD
+                                                                                {{ $item->price }}</span>
+                                                                            <span>/</span> Hour
+                                                                        </p>
+                                                                        <a class="p-absoulute pr-2" href="#">Book
+                                                                            now</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product__action">
+                                                                    <div class="inner__action">
+                                                                        <div class="wishlist">
+                                                                            <a href="#"><i
+                                                                                    class="fal fa-heart"></i></a>
+                                                                        </div>
+                                                                        <div class="view">
+                                                                            <a href="javascript:void(0)"><i
+                                                                                    class="fal fa-eye"></i></a>
+                                                                        </div>
+                                                                        <div class="layer">
+                                                                            <a href="#"><i
+                                                                                    class="fal fa-layer-group"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endforeach
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                             <div class="product-item swiper-slide">
                                                 <div class="product">
                                                     <div class="product__thumb">
@@ -958,7 +1140,8 @@
                                                             <h4><a href="shop.html">version of womens</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -990,8 +1173,8 @@
                                                                 alt="product_image">
                                                         </a>
                                                         <!-- <div class="product__update">
-                                                            <a class="#">new</a>
-                                                        </div> -->
+                                                                        <a class="#">new</a>
+                                                                    </div> -->
                                                         <div class="product-info mb-10">
                                                             <div class="product_category">
                                                                 <span>Shoes, Clothing</span>
@@ -1011,7 +1194,8 @@
                                                             <h4><a href="shop.html">Pink Stella Pump for</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -1064,7 +1248,8 @@
                                                             <h4><a href="shop.html">Sandal for Women</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -1096,8 +1281,8 @@
                                                                 alt="product_image">
                                                         </a>
                                                         <!-- <div class="product__update">
-                                                            <a class="#">new</a>
-                                                        </div> -->
+                                                                        <a class="#">new</a>
+                                                                    </div> -->
                                                         <div class="product-info mb-10">
                                                             <div class="product_category">
                                                                 <span>Shoes, Clothing</span>
@@ -1117,7 +1302,8 @@
                                                             <h4><a href="shop.html">Synthetic Slipper for Women</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to cart</a>
                                                             </div>
                                                         </div>
@@ -1170,8 +1356,10 @@
                                                             <h4><a href="shop.html">Pointed Heel for Women</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
-                                                                <a class="p-absoulute pr-2" href="#">add to cart</a>
+                                                                    <span>$</span>680.00
+                                                                </p>
+                                                                <a class="p-absoulute pr-2" href="#">add to
+                                                                    cart</a>
                                                             </div>
                                                         </div>
                                                         <div class="product__action">
@@ -1223,8 +1411,10 @@
                                                             <h4><a href="shop.html">new platform slope with</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
-                                                                <a class="p-absoulute pr-2" href="#">add to cart</a>
+                                                                    <span>$</span>680.00
+                                                                </p>
+                                                                <a class="p-absoulute pr-2" href="#">add to
+                                                                    cart</a>
                                                             </div>
                                                         </div>
                                                         <div class="product__action">
@@ -1254,6 +1444,99 @@
                                 <div class="container">
                                     <div class="product-active swiper-container">
                                         <div class="swiper-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+                                            @foreach ($list as $item)
+                                                @if ($item->categorises_id == 3)
+                                                    <div class="product-item swiper-slide" data-wow-duration="1s"
+                                                        data-wow-delay="0.2s">
+                                                        <div class="product">
+                                                            <div class="product__thumb">
+                                                                <a href="/single/{{ $item->title }}">
+                                                                    <img class="product-primary " style="width: 100%;"
+                                                                        src="imagesadd/{{ $item->picture }}"
+                                                                        alt="product_image">
+                                                                    <img class="product-secondary" style="width: 100%;"
+                                                                        src="imagesadd/{{ $item->picture_two }}"
+                                                                        alt="product_image">
+                                                                </a>
+                                                                <div class="product__update">
+                                                                    <a class="#">new</a>
+                                                                </div>
+                                                                <div class="product-info mb-10">
+                                                                    <div class="product_category">
+                                                                        <span>{{ $item->address }}</span>
+                                                                    </div>
+                                                                    <div class="product_rating">
+                                                                        <a href="#"><i
+                                                                                class="fal fa-star start-color"></i></a>
+                                                                        <a href="#"><i
+                                                                                class="fal fa-star start-color"></i></a>
+                                                                        <a href="#"><i
+                                                                                class="fal fa-star start-color"></i></a>
+                                                                        <a href="#"><i
+                                                                                class="fal fa-star"></i></a>
+                                                                        <a href="#"><i
+                                                                                class="fal fa-star"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product__name">
+                                                                    <h4><a href="shop.html">{{ $item->title }}</a></h4>
+                                                                    <div class="pro-price">
+                                                                        <p class="p-absoulute pr-1"><span>JOD
+                                                                                {{ $item->price }}</span>
+                                                                            <span>/</span> Hour
+                                                                        </p>
+                                                                        <a class="p-absoulute pr-2" href="#">Book
+                                                                            now</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product__action">
+                                                                    <div class="inner__action">
+                                                                        <div class="wishlist">
+                                                                            <a href="#"><i
+                                                                                    class="fal fa-heart"></i></a>
+                                                                        </div>
+                                                                        <div class="view">
+                                                                            <a href="javascript:void(0)"><i
+                                                                                    class="fal fa-eye"></i></a>
+                                                                        </div>
+                                                                        <div class="layer">
+                                                                            <a href="#"><i
+                                                                                    class="fal fa-layer-group"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endforeach
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                             <div class="product-item swiper-slide">
                                                 <div class="product">
                                                     <div class="product__thumb">
@@ -1285,8 +1568,10 @@
                                                             <h4><a href="single.html">Fashionable Stylish</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
-                                                                <a class="p-absoulute pr-2" href="#">add to cart</a>
+                                                                    <span>$</span>680.00
+                                                                </p>
+                                                                <a class="p-absoulute pr-2" href="#">add to
+                                                                    cart</a>
                                                             </div>
                                                         </div>
                                                         <div class="product__action">
@@ -1338,7 +1623,8 @@
                                                             <h4><a href="shop.html">Snaker Shoes for Women</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -1371,8 +1657,8 @@
                                                                 alt="product_image">
                                                         </a>
                                                         <!-- <div class="product__update">
-                                                            <a class="#">new</a>
-                                                        </div> -->
+                                                                        <a class="#">new</a>
+                                                                    </div> -->
                                                         <div class="product-info mb-10">
                                                             <div class="product_category">
                                                                 <span>Shoes, Clothing</span>
@@ -1392,7 +1678,8 @@
                                                             <h4><a href="shop.html">Fashion Classic Men </a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -1446,7 +1733,8 @@
                                                             <h4><a href="shop.html">Sneakers Converse for Men</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -1500,7 +1788,8 @@
                                                             <h4><a href="shop.html">NikeCourt Air Zoom Prestige</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -1554,7 +1843,8 @@
                                                             <h4><a href="shop.html">Slippers for Men and</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -1591,62 +1881,7 @@
     <!-- categories area end -->
 
     <!-- testimonial area start -->
-    <div class="testimonial-area">
-        <div class="testimonial">
-            <div class="testimonial-active swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testimonial mb-100">
-                            <div class="testimonial__item text-center">
-                                <div class="testimonial__thumb mb-20">
-                                    <img src="img/testimonial/testimonial.jpg" alt="">
-                                </div>
-                                <div class="testimonial__content">
-                                    <p class="mb-25">Great theme, extended super and fast professional support. Easy to
-                                        use, flexible, visual composer and more functional<br> plugins on board. Yes a real
-                                        good, strong theme with structured coding.<br>
-                                        Enjoy it! friendly and super good!</p>
-                                    <h4><span>JONT HENRRY</span>- CEO The Blue Sky</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial mb-100">
-                            <div class="testimonial__item text-center">
-                                <div class="testimonial__thumb mb-20">
-                                    <img src="img/testimonial/testimonial.jpg" alt="">
-                                </div>
-                                <div class="testimonial__content">
-                                    <p class="mb-25">Great theme, extended super and fast professional support. Easy to
-                                        use, flexible, visual composer and more functional<br> plugins on board. Yes a real
-                                        good, strong theme with structured coding.<br>
-                                        Enjoy it! friendly and super good!</p>
-                                    <h4><span>JONT HENRRY</span>- CEO The Blue Sky</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial mb-100">
-                            <div class="testimonial__item text-center">
-                                <div class="testimonial__thumb mb-20">
-                                    <img src="img/testimonial/testimonial.jpg" alt="">
-                                </div>
-                                <div class="testimonial__content">
-                                    <p class="mb-25">Great theme, extended super and fast professional support. Easy to
-                                        use, flexible, visual composer and more functional<br> plugins on board. Yes a real
-                                        good, strong theme with structured coding.<br>
-                                        Enjoy it! friendly and super good!</p>
-                                    <h4><span>JONT HENRRY</span>- CEO The Blue Sky</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- testimonial area end -->
 
     <!-- services area start -->
@@ -1715,61 +1950,68 @@
                                 <div class="container">
                                     <div class="product-active swiper-container">
                                         <div class="swiper-wrapper">
-                                            <div class="product-item swiper-slide wow fadeInUp" data-wow-duration="1s"
-                                                data-wow-delay="0.2s">
-                                                <div class="product product_3">
-                                                    <div class="product__thumb">
-                                                        <a href="single.html">
-                                                            <img class="product-primary" src="img/product/8.jpg"
-                                                                alt="product_image">
-                                                            <img class="product-secondary" src="img/product/8-2.jpg"
-                                                                alt="product_image">
-                                                        </a>
-                                                        <div class="product__update">
-                                                            <a class="#">new</a>
-                                                        </div>
-                                                        <div class="product-info mb-10">
-                                                            <div class="product_category">
-                                                                <span>Shoes, Clothing</span>
+
+                                            @foreach ($treelist as $item)
+                                                <div class="product-item swiper-slide wow fadeInUp"
+                                                    data-wow-duration="1s" data-wow-delay="0.2s">
+                                                    <div class="product product_3">
+                                                        <div class="product__thumb">
+                                                            <a href="/single/{{ $item->title }}">
+                                                                <img class="product-primary"
+                                                                    src="imagesadd/{{ $item->picture }}"
+                                                                    alt="product_image">
+                                                                <img class="product-secondary"
+                                                                    src="imagesadd/{{ $item->picture }}"
+                                                                    alt="product_image">
+                                                            </a>
+                                                            <div class="product__update">
+                                                                <a class="#">new</a>
                                                             </div>
-                                                            <div class="product_rating">
-                                                                <a href="#"><i
-                                                                        class="fal fa-star start-color"></i></a>
-                                                                <a href="#"><i
-                                                                        class="fal fa-star start-color"></i></a>
-                                                                <a href="#"><i
-                                                                        class="fal fa-star start-color"></i></a>
-                                                                <a href="#"><i class="fal fa-star"></i></a>
-                                                                <a href="#"><i class="fal fa-star"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product__name">
-                                                            <h4><a href="shop.html">Sports Vibox sandal</a></h4>
-                                                            <div class="pro-price">
-                                                                <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
-                                                                <a class="p-absoulute pr-2" href="#">add to
-                                                                    cart</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product__action">
-                                                            <div class="inner__action">
-                                                                <div class="wishlist">
-                                                                    <a href="#"><i class="fal fa-heart"></i></a>
+                                                            <div class="product-info mb-10">
+                                                                <div class="product_category">
+                                                                    <span>{{ $item->description }}</span>
                                                                 </div>
-                                                                <div class="view">
-                                                                    <a href="javascript:void(0)avascript:void(0)"><i
-                                                                            class="fal fa-eye"></i></a>
-                                                                </div>
-                                                                <div class="layer">
+                                                                <div class="product_rating">
                                                                     <a href="#"><i
-                                                                            class="fal fa-layer-group"></i></a>
+                                                                            class="fal fa-star start-color"></i></a>
+                                                                    <a href="#"><i
+                                                                            class="fal fa-star start-color"></i></a>
+                                                                    <a href="#"><i
+                                                                            class="fal fa-star start-color"></i></a>
+                                                                    <a href="#"><i class="fal fa-star"></i></a>
+                                                                    <a href="#"><i class="fal fa-star"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product__name">
+                                                                <h4><a href="shop.html">Sports Vibox sandal</a></h4>
+                                                                <div class="pro-price">
+                                                                    <p class="p-absoulute pr-1"><span>JOD
+                                                                        </span>{{ $item->price }} /Hour
+                                                                    </p>
+                                                                    <a class="p-absoulute pr-2" href="#">book
+                                                                        now</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product__action">
+                                                                <div class="inner__action">
+                                                                    <div class="wishlist">
+                                                                        <a href="#"><i
+                                                                                class="fal fa-heart"></i></a>
+                                                                    </div>
+                                                                    <div class="view">
+                                                                        <a href="javascript:void(0)avascript:void(0)"><i
+                                                                                class="fal fa-eye"></i></a>
+                                                                    </div>
+                                                                    <div class="layer">
+                                                                        <a href="#"><i
+                                                                                class="fal fa-layer-group"></i></a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            @endforeach
                                             <div class="product-item swiper-slide wow fadeInUp" data-wow-duration="1s"
                                                 data-wow-delay="0.4s">
                                                 <div class="product product_3">
@@ -1783,8 +2025,8 @@
                                                                 alt="product_image">
                                                         </a>
                                                         <!-- <div class="product__update">
-                                                            <a class="#">new</a>
-                                                        </div> -->
+                                                                        <a class="#">new</a>
+                                                                    </div> -->
                                                         <div class="product-info mb-10">
                                                             <div class="product_category">
                                                                 <span>Shoes, Clothing</span>
@@ -1804,7 +2046,8 @@
                                                             <h4><a href="shop.html">unar keds peng dei</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -1859,7 +2102,8 @@
                                                             <h4><a href="shop.html">Air zoom Hotel tor</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -1893,8 +2137,8 @@
                                                                 alt="product_image">
                                                         </a>
                                                         <!-- <div class="product__update">
-                                                            <a class="#">new</a>
-                                                        </div> -->
+                                                                        <a class="#">new</a>
+                                                                    </div> -->
                                                         <div class="product-info mb-10">
                                                             <div class="product_category">
                                                                 <span>Shoes, Clothing</span>
@@ -1914,7 +2158,8 @@
                                                             <h4><a href="shop.html">Regular show Mens</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -1969,7 +2214,8 @@
                                                             <h4><a href="shop.html">Flip-Flop Sports Slippers</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -2024,7 +2270,8 @@
                                                             <h4><a href="shop.html">NikeCourt Air Zoom Prestige</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -2087,7 +2334,8 @@
                                                             <h4><a href="shop.html">Sandal Vibox with mash </a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -2120,8 +2368,8 @@
                                                                 alt="product_image">
                                                         </a>
                                                         <!-- <div class="product__update">
-                                                            <a class="#">new</a>
-                                                        </div> -->
+                                                                        <a class="#">new</a>
+                                                                    </div> -->
                                                         <div class="product-info mb-10">
                                                             <div class="product_category">
                                                                 <span>Shoes, Clothing</span>
@@ -2141,7 +2389,8 @@
                                                             <h4><a href="shop.html">Sports Sandals for</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -2195,7 +2444,8 @@
                                                             <h4><a href="shop.html">Sports Sandals for Men</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -2228,8 +2478,8 @@
                                                                 alt="product_image">
                                                         </a>
                                                         <!-- <div class="product__update">
-                                                            <a class="#">new</a>
-                                                        </div> -->
+                                                                        <a class="#">new</a>
+                                                                    </div> -->
                                                         <div class="product-info mb-10">
                                                             <div class="product_category">
                                                                 <span>Shoes, Clothing</span>
@@ -2249,7 +2499,8 @@
                                                             <h4><a href="shop.html">Performer Sports Sandals </a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -2303,7 +2554,8 @@
                                                             <h4><a href="shop.html">Sports Leather Sandal</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>
@@ -2357,7 +2609,8 @@
                                                             <h4><a href="shop.html">Sports Men Casual Shoes</a></h4>
                                                             <div class="pro-price">
                                                                 <p class="p-absoulute pr-1"><span>$</span>680.00 -
-                                                                    <span>$</span>680.00</p>
+                                                                    <span>$</span>680.00
+                                                                </p>
                                                                 <a class="p-absoulute pr-2" href="#">add to
                                                                     cart</a>
                                                             </div>

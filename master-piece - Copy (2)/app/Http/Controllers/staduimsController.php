@@ -38,7 +38,7 @@ class staduimsController extends Controller
         // making photos not exist null 
         if ($request->picture) {
 
-            $newImageName = time() . '-' . $request->title . '1.' .
+            $newImageName = time() . '-' . '1.' .
                 $request->picture->extension();
 
             $request->picture->move(public_path('imagesadd'), $newImageName);
@@ -47,7 +47,7 @@ class staduimsController extends Controller
         }
         if ($request->picture_two) {
 
-            $newImageName2 = time() . '-' . $request->title . '2.' .
+            $newImageName2 = time() . '-' . '2.' .
                 $request->picture_two->extension();
 
             $request->picture_two->move(public_path('imagesadd'), $newImageName2);
@@ -56,7 +56,7 @@ class staduimsController extends Controller
         }
         if ($request->picture_three) {
 
-            $newImageName3 = time() . '-' . $request->title . '3.' .
+            $newImageName3 = time() . '-' . '3.' .
                 $request->picture_three->extension();
 
             $request->picture_three->move(public_path('imagesadd'), $newImageName3);
@@ -65,7 +65,7 @@ class staduimsController extends Controller
         }
         if ($request->picture_four) {
 
-            $newImageName4 = time() . '-' . $request->title . '4.' .
+            $newImageName4 = time() . '-'  . '4.' .
                 $request->picture_four->extension();
 
             $request->picture_four->move(public_path('imagesadd'), $newImageName4);
@@ -74,7 +74,7 @@ class staduimsController extends Controller
         }
         if ($request->picture_five) {
 
-            $newImageName5 = time() . '-' . $request->title . '5.' .
+            $newImageName5 = time() . '-' . '5.' .
                 $request->picture_five->extension();
 
             $request->picture_five->move(public_path('imagesadd'), $newImageName5);

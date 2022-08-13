@@ -9,102 +9,138 @@ use Dotenv\Validator;
 use GrahamCampbell\ResultType\Success;
 use App\Models\costumers;
 use App\Models\comments;
+use Illuminate\Support\Facades\DB;
 
 class mainController extends Controller
 {
-    
-    function index(){
+
+    function index()
+    {
+        $data = array(
+            'list' => products::get(),
+            'cat' => categorise::get(),
+            'treelist' => products::latest()->take(3)->get()
+        );
+        return view(('index'), $data);
+    }
+
+
+
+    function shop()
+    {
         $data = array(
             'list' => products::get(),
             'cat' => categorise::get(),
             'treelist' => products::latest()->take(5)->get()
         );
-        return view(('index'), $data);
-
+        return view(('stadiums'), $data);
     }
 
-    function single($title){
 
-        $row= products::where('title',$title)->first();
-        $comments= comments::where('product_id','=',$row->id)->get();
-        $data=[
+
+
+
+
+    function single($title)
+    {
+
+        $row = products::where('title', $title)->first();
+        $comments = comments::where('product_id', '=', $row->id)->get();
+        $data = [
             'info' => $row,
-            'singlecomments'=>$comments
+            'singlecomments' => $comments
         ];
-        return view('single',$data);
+        return view('single', $data);
     }
 
 
 
-    function logincheck(Request $request){
+    public function logincheckuser(Request $request)
+    {
         $request->validate([
-            'email'=>'required|email',
-            'password'=>'required'
+            'email' => 'required|email',
+            'password' => 'required'
         ]);
 
-        $checkuser=costumers::where('email','=',$request->input('email'))->first();
+        $checkuser = DB::table('costumers')->where('email', '=', $request->input('email'))->first();
 
-        if(!$checkuser){
-            return back()->with('fail','email is not regester yet');
-        }else{
-            if($checkuser->password == $request->password){
-                 $request->session()->put('usermail',$checkuser->email);
-                 $request->session()->put('username',$checkuser->name);
-                 return redirect('/');
-            }else{
-                return back()->with('fail','email or password are wrong!');
+        if (!$checkuser) {
+            return back()->with('fail', 'email is not regester yet');
+        } else {
+            if ($checkuser->password == $request->password) {
+                $request->session()->put('usermail', $checkuser->email);
+                $request->session()->put('username', $checkuser->name);
+                return redirect('/');
+            } else {
+                return back()->with('fail', 'email or password are wrong!');
             }
         }
     }
 
 
-    function login(){
+    function login()
+    {
         return view('login');
     }
 
-    function registerpage(){
+    function registerpage()
+    {
         return view('register');
     }
 
 
-    function logout(){
-        if(session()->has('username')){
-            
+    function logout()
+    {
+        if (session()->has('username')) {
+
             session()->pull('username');
             session()->pull('usermail');
-            return back();
+            return redirect('/');
         }
-        return back();
     }
 
 
 
-    function register(Request $request){
+    function register(Request $request)
+    {
         $request->validate([
             'name' => 'required |max:100|min:3',
             'email' => 'required|unique:costumers,email|email|max:200|min:5',
             'password' => 'required |min:3'
         ]);
 
-        $add=costumers::insert([
+        $add = costumers::insert([
 
-            'name'=>$request->input('name'),
-            'email'=>$request->input('email'),
-            'password'=>$request->input('password')
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => $request->input('password')
 
-            
+
         ]);
-        if($add){
-            $request->session()->put('usermail',$request->input('name'));
-            $request->session()->put('username',$request->input('email'));
+        if ($add) {
+            $request->session()->put('usermail', $request->input('name'));
+            $request->session()->put('username', $request->input('email'));
             return  redirect('/');
-
-        }else {
-            return back()->with('fail','something wrong! please try later');
+        } else {
+            return back()->with('fail', 'something wrong! please try later');
         }
+    }
 
 
-        
-        
+
+
+    function addcomment(Request $request)
+    {
+        $add = comments::insert([
+
+            'username' => $request->input('username'),
+            'product_id' => $request->input('product_id'),
+            'comment' => $request->input('comment')
+
+
+        ]);
+
+
+        return back();
     }
 }

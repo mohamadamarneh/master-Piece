@@ -114,16 +114,33 @@
                                     id="birthdaytime" name="birthdaytime" style="width: 150px">
                                 </i>
                             </span>
+                          
 
                             <span>
                                 <select id="birthdaytime" name="birthdaytime" class="form-control" style="height: 50px">
-                                    <option value="">07:00 - 09:00</option>
-                                    <option value="">09:00 - 11:00</option>
-                                    <option value="">01:00 - 03:00</option>
-                                    <option value="">03:00 - 05:00</option>
-                                    <option value="">05:00 - 07:00</option>
-                                    <option value="">07:00 - 09:00</option>
-                                    <option value="">09:00 - 11:00</option>
+                                    <option value="07:00 - 09:00">07:00 - 09:00</option>
+                                    <option value="09:00 - 11:00">09:00 - 11:00</option>
+                                    <option value="01:00 - 03:00">11:00 - 01:00</option>
+                                    <option value="01:00 - 03:00">01:00 - 03:00</option>
+                                    <option value="03:00 - 05:00">03:00 - 05:00</option>
+                                    <option value="05:00 - 07:00">05:00 - 07:00</option>
+                                    <option value="07:00 - 09:00">07:00 - 09:00</option>
+                                    <option value="09:00 - 11:00">09:00 - 11:00</option>
+                                    @php
+                                    $timestamp='07:00';
+                                    $timestamp2='07:00';
+                                    for ($i=0; $i <5 ; $i++) { 
+                                        $timestamp = strtotime($timestamp) + (60*60 + 60*60);
+                                        $time = date('H:i', $timestamp);
+
+                                        $timestamp2 = strtotime($timestamp2) + (60*60 + 60*60);
+                                        $time2 = date('H:i', $timestamp2);
+                                        
+                                        echo '<option value="07:00 - 09:00">'.$time.' - '.$time2.'</option>' ;
+        
+                                    }
+                                        
+                                    @endphp
                                 </select>
                             </span>
 
@@ -191,47 +208,7 @@
         <div class="col-xl-8 col-lg-8 col-md-8 offset-xl-2">
             <div class="product__reviews_comment pt-150">
                 <p>1 review for Detail V-Neck Sweater</p>
-                <div class="user_design">
-                    <div class="user__thumb">
-                        <img src="img/desc/team2-60x60.png" alt="">
-                    </div>
-                    <div class="user__content">
-                        <h4>admin<span> – July 13, 2020: {{ $info->id }}</span></h4>
-                        <span>
-                            <a href="#"><i class="fal fa-star start-color"></i></a>
-                            <a href="#"><i class="fal fa-star start-color"></i></a>
-                            <a href="#"><i class="fal fa-star start-color"></i></a>
-                            <a href="#"><i class="fal fa-star start-color"></i></a>
-                            <a href="#"><i class="fal fa-star start-color"></i></a>
-                        </span>
-                        <p>Designed by Hans J. Wegner in 1949 as one of the first models created especially for Carl Hansen
-                            & Son, and produced since 1950. The last of a series of chairs Wegner designed based on
-                            inspiration from antique
-                        </p>
-                    </div>
-                </div>
-
-
-
-                <div class="user_design">
-                    <div class="user__thumb">
-                        <img src="img/desc/team2-60x60.png" alt="">
-                    </div>
-                    <div class="user__content mt-3">
-                        <h4>admin<span> – July 13, 2020: </span></h4>
-                        <span>
-                            <a href="#"><i class="fal fa-star start-color"></i></a>
-                            <a href="#"><i class="fal fa-star start-color"></i></a>
-                            <a href="#"><i class="fal fa-star start-color"></i></a>
-                            <a href="#"><i class="fal fa-star start-color"></i></a>
-                            <a href="#"><i class="fal fa-star start-color"></i></a>
-                        </span>
-                        <p>Designed by Hans J. Wegner in 1949 as one of the first models created especially for Carl Hansen
-                            & Son, and produced since 1950. The last of a series of chairs Wegner designed based on
-                            inspiration from antique
-                        </p>
-                    </div>
-                </div>
+                
 
 
 
@@ -273,14 +250,17 @@
                 <a href="#"><i class="fal fa-star start-color"></i></a>
             </span>
             <div class="review_form">
-                <form action="#">
+                <form action="/addcomment" method="get">
+                    <input type="hidden" value="{{Session::get('username')}}" name="username">
+                    <input type="hidden" value="{{ $info->id }}" name="product_id">
                     <div class="review__wrap_1">
                         <label>Your Review *</label>
-                        <textarea name="review"></textarea>
+                        <textarea name="comment" ></textarea>
                     </div>
 
                     <div class="review__wrap pt-15">
-                        <button type="submit">submit</button>
+                        <button type="submit" {{ !Session::get('usermail')? 'disabled' : ''}} >submit</button>
+                        {{ !Session::get('usermail')? '     *  you most be login to comment' : ''}}
                     </div>
                 </form>
             </div>

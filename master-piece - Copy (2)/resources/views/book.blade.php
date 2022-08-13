@@ -13,17 +13,21 @@
                     <div class="cart_table">
                         <table>
                             <tr>
+
+                                
                                 <td>Stadium</td>
                                 <td>Date</td>
                                 <td>Uniform wears</td>
                                 <td>Coach</td>
                                 <td>Total</td>
 
+
                             </tr>
                             <tbody>
                                 <tr class="max-width-set">
                                     <td>
-                                        <img src="img/desc/3-500x500.jpg" alt="">
+                                        zabda stadium
+                                        <img src="" alt="">
                                     </td>
                                     <td>
                                         2022/9/5 <br>
@@ -53,8 +57,8 @@
                                     <td>
                                         <input type="text" placeholder="Coupon Code">
                                     </td>
-                                    <td><button type="submit">Apply Coupon</button></td>
-                                    <td colspan="3"><a href="#">update cart</a></td>
+                                    {{-- <td><button type="submit">Apply Coupon</button></td>
+                                    <td colspan="3"><a href="#">update cart</a></td> --}}
                                 </tr>
                             </tfoot>
                         </table>
