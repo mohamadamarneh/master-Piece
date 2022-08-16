@@ -35,6 +35,19 @@ Route::get('/',[mainController::class,'index']);
 Route::get('/single/{title}',[mainController::class,'single']);
 
 
+Route::get('/book',[mainController::class,'bookpage']);
+
+Route::post('addbook',[mainController::class,'addbook']);
+
+Route::post('editprofile',[mainController::class,'editprofile']);
+
+Route::post('editprofileres',[mainController::class,'editprofileres']);
+
+
+
+Route::get('/account',[mainController::class,'account']);
+
+
 
 
 
@@ -64,37 +77,21 @@ Route::group(['middleware'=>'Authcheck'],function(){
 
 Route::get('/stadiums',[mainController::class,'shop']);
 
-// Route::get('/stadiums', function () {
-//     return view('stadiums');
-// });
-
-// Route::get('/single/{title}', function () {
-//     return view('single');
-// });
 
 Route::get('/sun', function () {
     return view('welcome');
 });
 
-// Route::get('/login', function () {
-//     return view('login');
-// });
-
-// Route::get('/register', function () {
-//     return view('register');
-// });
 
 Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/edit', function () {
-    return view('edit');
-});
+// Route::get('/edit', function () {
+//     return view('edit');
+// });
 
-Route::get('/book', function () {
-    return view('book');
-});
+
 
 Route::get('/contact', function () {
     return view('contact');

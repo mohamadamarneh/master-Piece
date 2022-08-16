@@ -1959,10 +1959,10 @@
                                                             <a href="/single/{{ $item->title }}">
                                                                 <img class="product-primary"
                                                                     src="imagesadd/{{ $item->picture }}"
-                                                                    alt="product_image">
+                                                                    alt="product_image"   style="width: 100%">
                                                                 <img class="product-secondary"
                                                                     src="imagesadd/{{ $item->picture }}"
-                                                                    alt="product_image">
+                                                                    alt="product_image" style="width: 100%">
                                                             </a>
                                                             <div class="product__update">
                                                                 <a class="#">new</a>

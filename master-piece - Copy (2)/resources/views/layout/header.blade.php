@@ -194,9 +194,9 @@
                                         @if (Session::get('username'))
                                         <li class="menu-item-has-children"><a href="/profile">Profile</a>
                                             <ul class="sub-menu">
-                                                <li><a href="blog-grid.html">Account</a></li>
                                                 <li>
-                                                    
+                                                    <a href="account" >Account</a></li>
+                                                <li>
                                                     <a href="logout">Log out</a></li>
                 
                                             </ul>
@@ -208,7 +208,7 @@
                                         <li><a href="/register">Register</a></li>
                                         @endif
                                         
-                                        <li><a href="about">About</a></li>
+                                        <li><a href="/about">About</a></li>
                                         <li><a href="/contact">contact us </a></li>
                                        
                                     </ul>
