@@ -199,6 +199,18 @@ class mainController extends Controller
     }
 
 
+    function cats($id){
+        $Categories = Products::where('categorises_id',$id)->get();
+
+
+        $data = [
+            'list' => $Categories,
+        ];
+        return view('categury', $data);
+        // return $Categories ;
+
+
+    }
     function logout()
     {
         if (session()->has('username')) {

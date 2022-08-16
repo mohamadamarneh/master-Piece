@@ -4,6 +4,7 @@
         <div class="search_close">
             <span><i class="fal fa-times"></i></span>
         </div>
+
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12">
@@ -136,52 +137,7 @@
 
                         </div>
 
-                        <div class="product_list_widget">
-                            <h3 class="widget-title mb-30 pt-50">Top rated</h3>
 
-                        @for ($i = 0; $i < 2; $i++)
-                            
-                        
-                                
-                            
-                            <div class="item-widget">
-                                <div class="img-left p-2 rounded" >
-                                    <a href="/single/{{ $list[$i]->title }}"><img src="imagesadd/{{  $list[$i]->picture_two }}" alt="product-meta" class="rounded" ></a>
-                                </div>
-                                <div class="product-meta">
-                                    <a  href="/single/{{ $list[$i]->title }}" >
-                                        <h4 class="sm-title">{{ $list[$i]->title }}</h4>
-                                    </a>
-                                    <span>JOD {{ $list[$i]->price }}</span>
-                                </div>
-                            </div> 
-                            @endfor
-                           
-
-{{-- 
-                            <div class="item-widget">
-                                <div class="img-left">
-                                    <a href="single.html"><img src="img/product/13.jpg" alt="product-meta"></a>
-                                </div>
-                                <div class="product-meta">
-                                    <a href="single.html">
-                                        <h4 class="sm-title">printing and typesetting</h4>
-                                    </a>
-                                    <span>$55.00</span>
-                                </div>
-                            </div> --}}
-                        </div>
-                        <div class="product-widget pt-50">
-                            <h3 class="widget-title mb-30">Product tags</h3>
-                            <div class="tags mb-50">
-                                <a href="shop.html">Basketball</a>
-                                <a href="shop.html">Football</a>
-                                <a href="shop.html">Tennis</a>
-                                <a href="shop.html">Discounts</a>
-                                <a href="shop.html">10 %</a>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-8 col-md-9 col-sm-12">
@@ -190,31 +146,6 @@
                             <p> Showing all 21 results</p>
                         </div>
                         <div class="shop-tab">
-                            <nav>
-                                <div class="nav nav-tabs shop-tabs" id="nav-tab" role="tablist">
-                                    <button>
-                                        <span>views</span>
-                                    </button>
-                                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-home" type="button" role="tab" aria-selected="true">
-                                        <img src="img/essential/i2.svg" alt="">
-                                    </button>
-                                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-profile" type="button" role="tab"
-                                        aria-selected="false">
-                                        <img src="img/essential/i3.svg" alt="">
-                                    </button>
-                                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-contact" type="button" role="tab"
-                                        aria-selected="false">
-                                        <img src="img/essential/i4.svg" alt="">
-                                    </button>
-                                    <button class="nav-link" id="nav-contact-tab2" data-bs-toggle="tab"
-                                        data-bs-target="#nav-list" type="button" role="tab" aria-selected="false">
-                                        <img src="img/essential/list.svg" alt="">
-                                    </button>
-                                </div>
-                            </nav>
                         </div>
                         <div class="shop-filtaring">
                             {{-- <div class="filter-select">
@@ -302,7 +233,10 @@
                                                         <div class="product__thumb">
                                                             <a href="/single/{{ $item->title }}">
                                                                 <img class="product-primary" style="width: 100%"
-                                                                    src="imagesadd/{{ $item->picture }}"
+
+
+                                                                
+                                                                    src={{ asset("../../imagesadd/$item->picture") }}
                                                                     alt="product_image">
                                                                 <img class="product-secondary" style="width: 100%"
                                                                     src="imagesadd/{{ $item->picture_two }}"

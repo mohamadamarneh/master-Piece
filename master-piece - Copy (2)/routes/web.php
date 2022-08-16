@@ -77,6 +77,8 @@ Route::group(['middleware'=>'Authcheck'],function(){
 
 Route::get('/stadiums',[mainController::class,'shop']);
 
+Route::get('/categury/{id}',[mainController::class,'cats']);
+
 
 Route::get('/sun', function () {
     return view('welcome');
