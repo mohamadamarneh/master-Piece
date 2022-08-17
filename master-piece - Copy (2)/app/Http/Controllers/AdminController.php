@@ -16,17 +16,44 @@ class AdminController extends Controller
 
     function indextrainer(Request $request)
     {
-        $a = coaches::where('email', '=', $request->session()->get('ownermail'))->first();
-        $n = products::where('id', '=', $a->product_id)->first();
+        $a = coaches::where('email', '=', $request->session()->get('coachmail'))->first();
+        $n = products::where('categorises_id', '=', $a->categorises_id)->first();
+        $arr=array();
+        
+        // foreach ($n as $value) {
+
+        //     $v = books::where('product_id',$value->id)->get();
+
+        //     array_push($arr,$v);
+            
+        // }
+
+        $v = books::where('product_id',$n->id)->get();
+
+        $v = books::where('product_id',$n->id)
+        ->join('products', 'books.product_id', '=', 'products.id')
+        ->get([ 'products.*', 'books.*']);
+
+
+
+
+        // $r= products::where('categorises_id',$a->categorises_id)->get();
+
+
+        // $join = books::join('costumers', 'books.costumer_id', '=', 'costumers.id')
+        //     ->join('products', 'books.product_id', '=', 'products.id')
+        //     ->get(['costumers.*', 'products.*', 'books.*']);
+
+
+
 
         $data = array(
-            'list' => books::where('product_id', $a->product_id)->orderBy('id', 'DESC')->get(),
-            'info' => $n
+            'list' =>$v,
+            'info' => $a
         );
-
+        // return    $v ;
         return view(('manage.trainerindex'), $data);
     }
-
 
 
 
@@ -39,6 +66,7 @@ class AdminController extends Controller
             'list' => books::where('product_id', $a->product_id)->orderBy('id', 'DESC')->get(),
             'info' => $n
         );
+    
         return view(('manage.onwrindex'), $data);
     }
 

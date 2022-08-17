@@ -3,14 +3,14 @@
 @section('name')
     <div class="container mt-5">
         <div class="mt-5">
-            <h2 class="text-uppercase">{{ $info->title }}</h2>
+            <h2 class="text-uppercase"></h2>
             <h1> Active Books : <span class="text-warning">
 
                     @php
                         $x = 0;
                     @endphp
                     @foreach ($list as $item)
-                        @if ($item->date >= date('Y-m-d'))
+                        @if ($item->date >= date('Y-m-d') && $item->trainer_A)
                             @php
                                 $x++;
                             @endphp
@@ -32,14 +32,16 @@
                         <th>date </th>
 
                         <th>costumer id</th>
+                        <th>stadium</th>
+                        <th>address</th>
                         <th> trainer</th>
-                        <th>wears </th>
+
 
                         <th> Delete</th>
                     </tr>
                 </thead>
                 @foreach ($list as $item)
-                    @if ($item->date >= date('Y-m-d'))
+                    @if ($item->date >= date('Y-m-d') && $item->trainer_A )
                         <tr>
                             <td scope="row">{{ $item->id }}</td>
                             <td>{{ $item->date }} <br>
@@ -48,8 +50,12 @@
 
                             <td>{{ $item->costumer_id }}</td>
 
+
+                            <td>{{ $item->title }}</td>
+                            <td>{{ $item->address }}</td>
+
                             <td>{{ $item->trainer_A ? 'yes' : 'no' }}</td>
-                            <td>{{ $item->wears_A ? 'yes' : 'no' }}</td>
+                           
 
                             <td>
 
@@ -79,8 +85,8 @@
                     @php
                         $x = 0;
                     @endphp
-                    @foreach ($list as $item)
-                        @if ($item->date < date('Y-m-d'))
+                    @foreach ($list as $item )
+                        @if ($item->date < date('Y-m-d') && $item->trainer_A)
                             @php
                                 $x++;
                             @endphp
@@ -102,12 +108,11 @@
                     <tr>
                         <th>id</th>
                         <th>date </th>
-
                         <th>costumer id</th>
+                        <th>stadium</th>
+                        <th>address</th>
                         <th> trainer</th>
-                        <th>wears </th>
-
-
+                    
                     </tr>
                 </thead>
                 @foreach ($list as $item)
@@ -117,12 +122,10 @@
                             <td>{{ $item->date }} <br>
                                 {{ $item->time }}
                             </td>
-
                             <td>{{ $item->costumer_id }}</td>
-
+                            <td>{{ $item->title }}</td>
+                            <td>{{ $item->address }}</td>
                             <td>{{ $item->trainer_A ? 'yes' : 'no' }}</td>
-                            <td>{{ $item->wears_A ? 'yes' : 'no' }}</td>
-
 
                         </tr>
                     @endif

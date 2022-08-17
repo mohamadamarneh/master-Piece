@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@if (!!Session::get('adminname') && !Session::get('ownername') && !Session::get('coachname'))
+@if (!Session::get('adminname') && !Session::get('ownername') && !Session::get('coachname'))
     @php
         header('Location:http://127.0.0.1:8000/dash-login');
         exit();
