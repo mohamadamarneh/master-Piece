@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoachesTable extends Migration
+class CreateOwnersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateCoachesTable extends Migration
      */
     public function up()
     {
-        Schema::create('coaches', function (Blueprint $table) {
+        Schema::create('owners', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email');
             $table->string('password');
-            $table->string('phone')->nullable();
-            $table->foreignId('categorises_id')->nullable()->constrained('categorises')->onDelete('cascade');
+            $table->foreignId('product_id')->nullable()->constrained('products')->onDelete('cascade')->onUpdate('cascade');
+            
+            
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateCoachesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coaches');
+        Schema::dropIfExists('owners');
     }
 }

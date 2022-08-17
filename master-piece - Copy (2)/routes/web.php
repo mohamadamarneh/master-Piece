@@ -10,7 +10,7 @@ use App\Http\Controllers\commentController;
 use App\Http\Controllers\costumerController;
 use App\Http\Controllers\coachesController;
 use App\Http\Controllers\bookController;
-
+use App\Http\Controllers\OwnerController;
 
 
 /*
@@ -49,7 +49,8 @@ Route::get('/account',[mainController::class,'account']);
 
 
 
-
+Route::get('/trainer',[AdminController::class,'indextrainer']);
+Route::get('/owner',[AdminController::class,'indexowner']);
 
 
 
@@ -192,6 +193,12 @@ Route::post('delete-book',[bookController::class,'delete']);
 
 
 
+// owners  dashboard
+Route::get('dash-owners',[OwnerController::class,'index']);
+Route::post('add-owner',[OwnerController::class,'add']);
+Route::get('edit-owner/{id}',[OwnerController::class,'edit']);
+Route::post('update-owners',[OwnerController::class,'update'])->name('update-owners');
+Route::post('delete-owners',[OwnerController::class,'delete']);
 
 
 

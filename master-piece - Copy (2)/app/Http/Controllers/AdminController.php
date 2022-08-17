@@ -4,25 +4,71 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\admin;
+use App\Models\books;
+use App\Models\products;
+use App\Models\owner;
+use App\Models\coaches;
 
 class AdminController extends Controller
 {
     //
 
-    function login(){
-        return view('manage.login');
 
+    function indextrainer(Request $request)
+    {
+        $a = coaches::where('email', '=', $request->session()->get('ownermail'))->first();
+        $n = products::where('id', '=', $a->product_id)->first();
+
+        $data = array(
+            'list' => books::where('product_id', $a->product_id)->orderBy('id', 'DESC')->get(),
+            'info' => $n
+        );
+
+        return view(('manage.trainerindex'), $data);
     }
 
 
-    
+
+
+    function indexowner(Request $request)
+    {
+        $a = owner::where('email', '=', $request->session()->get('ownermail'))->first();
+        $n = products::where('id', '=', $a->product_id)->first();
+
+        $data = array(
+            'list' => books::where('product_id', $a->product_id)->orderBy('id', 'DESC')->get(),
+            'info' => $n
+        );
+        return view(('manage.onwrindex'), $data);
+    }
 
 
 
 
-    function logout(){
-        if(session()->has('adminname')){
-            
+
+
+
+
+
+
+
+
+    function login()
+    {
+        return view('manage.login');
+    }
+
+
+
+
+
+
+
+    function logout()
+    {
+        if (session()->has('adminname') || session()->has('ownername') || session()->has('coachname')) {
+
+            session()->flush();
             session()->pull('adminmail');
             session()->pull('adminname');
             return redirect('dash-login');
@@ -31,24 +77,37 @@ class AdminController extends Controller
     }
 
 
-    function logincheck(Request $request){
+    function logincheck(Request $request)
+    {
         $request->validate([
-            'email'=>'required|email',
-            'password'=>'required'
+            'email' => 'required|email',
+            'password' => 'required'
         ]);
 
-        $checkuser=admin::where('email','=',$request->input('email'))->first();
+        $checkadmin = admin::where('email', '=', $request->input('email'))->first();
+        $checkowner = owner::where('email', '=', $request->input('email'))->first();
+        $checkch = coaches::where('email', '=', $request->input('email'))->first();
 
-        if(!$checkuser){
-            return back()->with('fail','email is not regester yet');
-        }else{
-            if($checkuser->password == $request->password){
-                 $request->session()->put('adminmail',$checkuser->email);
-                 $request->session()->put('adminname',$checkuser->name);
-                 return redirect('/dash');
-            }else{
-                return back()->with('fail','email or password are wrong!');
-            }
+
+        if ($checkowner && $checkowner->password == $request->password) {
+            $request->session()->put('ownermail', $checkowner->email);
+            $request->session()->put('ownername', $checkowner->name);
+            return redirect('/owner');
+        }
+
+        if ($checkadmin && $checkadmin->password == $request->password) {
+            $request->session()->put('adminmail', $checkadmin->email);
+            $request->session()->put('adminname', $checkadmin->name);
+            return redirect('/dash');
+        }
+
+
+        if ($checkch && $checkch->password == $request->password) {
+            $request->session()->put('coachmail', $checkch->email);
+            $request->session()->put('coachname', $checkch->name);
+            return redirect('/trainer');
+        } else {
+            return back()->with('fail', 'email or password are wrong!');
         }
     }
 
@@ -61,7 +120,6 @@ class AdminController extends Controller
             'list' => admin::get()
         );
         return view(('manage.admins'), $data);
-
     }
 
 
@@ -71,7 +129,7 @@ class AdminController extends Controller
             'name' => 'required|max:50|min:2',
             'email' => 'required|email|unique:admins,email',
             'password' => 'required|min:5'
-            
+
         ]);
 
         $query = admin::insert([
@@ -109,7 +167,7 @@ class AdminController extends Controller
             'name' => 'required|max:50|min:2',
             'email' => 'required|email',
             'password' => 'required|min:5'
-            
+
 
         ]);
 
@@ -124,8 +182,8 @@ class AdminController extends Controller
             );
         if ($updating) {
             return redirect('dash-admins')->with('succ', 'updating success !');
-        }else{
-            echo 'something wrong happend ' ;
+        } else {
+            echo 'something wrong happend ';
         }
     }
     function delete(Request $request)
@@ -136,7 +194,4 @@ class AdminController extends Controller
             return redirect('dash-admins')->with('secdel', 'item deleted successfully');
         }
     }
-
-
-
 }
