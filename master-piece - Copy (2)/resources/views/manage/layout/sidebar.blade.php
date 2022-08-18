@@ -28,7 +28,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href={{ asset('assets/css/style.css') }}>
     <!-- End layout styles -->
-    <link rel="shortcut icon" href={{ asset('assets/images/favicon.png') }} />
+    <link rel="shortcut icon" href={{asset("images/logo/logo_transparent(1).png")}} />
 </head>
 
 <body>
@@ -37,10 +37,10 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo" href="index.html"><img src={{ asset('assets/images/logo.svg') }}
+                <a class="sidebar-brand brand-logo" href="/dash"><img src={{asset("images/logo/aaaaa(2).png")}} style="max-width: 100%;"
                         alt="logo" /></a>
-                <a class="sidebar-brand brand-logo-mini" href="index.html"><img
-                        src={{ asset('assets/images/logo-mini.svg') }} alt="logo" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="/dash"><img 
+                    src={{asset("images/logo/aaaaa(3).png")}} style="max-width: 100%; height: 50px;" alt="logo" /></a>
             </div>
             <ul class="nav">
                 <li class="nav-item profile">

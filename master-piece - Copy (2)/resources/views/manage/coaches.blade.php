@@ -1,6 +1,15 @@
 @extends('manage.layout.mastr')
 
 @section('name')
+
+
+
+@if (!Session::get('adminname'))
+    @php
+       header("location:javascript://history.go(-1)");
+        exit();
+    @endphp
+@endif
     <div class="container mt-5">
 
         <hr>

@@ -1,6 +1,15 @@
 @extends('manage.layout.mastr')
 
 @section('name')
+    @if (!Session::get('adminname'))
+        @php
+            header('location:javascript://history.go(-1)');
+            exit();
+        @endphp
+    @endif
+
+
+
     <div class="container mt-5">
         {{-- <h1>crud example</h1> --}}
         <hr>
@@ -31,11 +40,10 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="">Costumer id</label>
-                        <input type="text" value="{{ old('costumer_id') }}" class="form-control" name="costumer_id" id=""
-                            aria-describedby="emailHelpId" placeholder="name">
+                        <input type="text" value="{{ old('costumer_id') }}" class="form-control" name="costumer_id"
+                            id="" aria-describedby="emailHelpId" placeholder="name">
 
                         @error('costumer_id')
-                
                             <div class="text-danger">
                                 <p>* {{ $message }}</p>
                             </div>
@@ -47,8 +55,8 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="">product id</label>
-                        <input type="text" value="{{ old('product_id') }}" class="form-control" name="product_id" id=""
-                            aria-describedby="emailHelpId" placeholder="email">
+                        <input type="text" value="{{ old('product_id') }}" class="form-control" name="product_id"
+                            id="" aria-describedby="emailHelpId" placeholder="email">
 
                         @error('product_id')
                             <div class="text-danger">
@@ -67,7 +75,6 @@
                             aria-describedby="emailHelpId" placeholder="date">
 
                         @error('date')
-                
                             <div class="text-danger">
                                 <p>* {{ $message }}</p>
                             </div>
@@ -79,8 +86,8 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="">time </label>
-                        <input type="time" value="{{ old('time') }}" class="form-control" name="time" id=""
-                            aria-describedby="emailHelpId" placeholder="time">
+                        <input type="time" value="{{ old('time') }}" class="form-control" name="time"
+                            id="" aria-describedby="emailHelpId" placeholder="time">
 
                         @error('date')
                             <div class="text-danger">
@@ -95,13 +102,13 @@
                 <div class="col">
 
                     <div class="form-check">
-                        <input type="checkbox"  value="1"  name="trainer_A"  class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" value="1" name="trainer_A" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Trainer</label>
-                      </div>
-                      <div class="form-check">
+                    </div>
+                    <div class="form-check">
                         <input type="checkbox" value="1" name="wears_A" class="form-check-input" id="exampleCheck2">
                         <label class="form-check-label" for="exampleCheck2">Wears</label>
-                      </div>
+                    </div>
                 </div>
                 <div class="col">
 

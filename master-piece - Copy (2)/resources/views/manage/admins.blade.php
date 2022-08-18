@@ -1,6 +1,14 @@
 @extends('manage.layout.mastr')
 
 @section('name')
+    @if (!Session::get('adminname'))
+        @php
+            header('location:javascript://history.go(-1)');
+            exit();
+        @endphp
+    @endif
+
+
     <div class="container mt-5">
         {{-- <h1>crud example</h1> --}}
         <hr>
@@ -34,7 +42,7 @@
 
                 @error('name')
                     <div style="color: red">
-                       <p>* {{ $message }}</p>
+                        <p>* {{ $message }}</p>
                     </div>
                 @enderror
             </div>
@@ -45,7 +53,7 @@
 
                 @error('email')
                     <div style="color: red">
-                       <p>* {{ $message }}</p>
+                        <p>* {{ $message }}</p>
                     </div>
                 @enderror
             </div>
@@ -56,7 +64,7 @@
 
                 @error('password')
                     <div style="color: red">
-                       <p>* {{ $message }}</p>
+                        <p>* {{ $message }}</p>
                     </div>
                 @enderror
             </div>
@@ -80,21 +88,20 @@
                         <td scope="row">{{ $item->id }}</td>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->email }}</td>
-                        
+
                         <td>
 
-                           
 
 
-                            @if ($item->id==1)
-                                
+
+                            @if ($item->id == 1)
                             @else
-                            <a href="edit-admin/{{ $item->id }}" class="btn btn-secondry btn-sx">edit</a>
-                            <form action="delete-admin" method="POST" style="display: inline">
-                                @csrf
-                                <input type="hidden" value="{{ $item->id }}" name="pid">
-                                <button type="submit" class="btn btn-danger btn-sx">delete</button>
-                            </form>
+                                <a href="edit-admin/{{ $item->id }}" class="btn btn-secondry btn-sx">edit</a>
+                                <form action="delete-admin" method="POST" style="display: inline">
+                                    @csrf
+                                    <input type="hidden" value="{{ $item->id }}" name="pid">
+                                    <button type="submit" class="btn btn-danger btn-sx">delete</button>
+                                </form>
                             @endif
 
                         </td>

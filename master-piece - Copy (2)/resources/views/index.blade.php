@@ -1937,9 +1937,9 @@
         <div class="container-fluid">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div class="section-wrapper text-center mb-35 ">
-                    <h2 class="section-title text-white">Explore Our featured</h2>
-                    <p class="text-white">Commodo sociosqu venenatis cras dolor sagittis integer luctus sem primis<br>
-                        eget maecenas sed urna malesuada.</p>
+                    <h2 class="section-title text-white">Explore Our New Stadiums</h2>
+                    <p class="text-white">new stadium in jordan added to our services<br> 
+                       book your stadium now  .</p>
                 </div>
             </div>
             <div class="row">

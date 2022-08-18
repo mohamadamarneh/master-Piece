@@ -1,6 +1,12 @@
 @extends('manage.layout.mastr')
 
 @section('name')
+    @if (!Session::get('adminname'))
+        @php
+            header('location:javascript://history.go(-1)');
+            exit();
+        @endphp
+    @endif
     <div class="container mt-5">
         {{-- <h1>crud example</h1> --}}
         <hr>
@@ -34,7 +40,7 @@
 
                 @error('name')
                     <div style="color: red">
-                       <p>* {{ $message }}</p>
+                        <p>* {{ $message }}</p>
                     </div>
                 @enderror
             </div>
@@ -45,7 +51,7 @@
 
                 @error('email')
                     <div style="color: red">
-                       <p>* {{ $message }}</p>
+                        <p>* {{ $message }}</p>
                     </div>
                 @enderror
             </div>
@@ -56,7 +62,7 @@
 
                 @error('password')
                     <div style="color: red">
-                       <p>* {{ $message }}</p>
+                        <p>* {{ $message }}</p>
                     </div>
                 @enderror
             </div>
@@ -67,7 +73,7 @@
 
                 @error('phone')
                     <div style="color: red">
-                       <p>* {{ $message }}</p>
+                        <p>* {{ $message }}</p>
                     </div>
                 @enderror
             </div>

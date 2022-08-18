@@ -115,6 +115,9 @@
                     
                     </tr>
                 </thead>
+                
+                <tbody>
+
                 @foreach ($list as $item)
                     @if ($item->date < date('Y-m-d'))
                         <tr>
@@ -130,8 +133,7 @@
                         </tr>
                     @endif
                 @endforeach
-                <tbody>
-
+                
 
                 </tbody>
             </table>

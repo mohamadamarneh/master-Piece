@@ -1,6 +1,12 @@
 @extends('manage.layout.mastr')
 
 @section('name')
+    @if (!Session::get('adminname'))
+        @php
+            header('location:javascript://history.go(-1)');
+            exit();
+        @endphp
+    @endif
     <div class="container mt-5">
         {{-- <h1>crud example</h1> --}}
         <hr>
@@ -80,7 +86,7 @@
                         <td scope="row">{{ $item->id }}</td>
                         <td>{{ $item->username }}</td>
                         <td>{{ $item->comment }}</td>
-                        <td>{{ $item->product_id}}</td>
+                        <td>{{ $item->product_id }}</td>
                         <td>{{ $item->created_at }}</td>
                         <td>
 
@@ -92,7 +98,7 @@
                         </td>
                     </tr>
                 @endforeach
-       
+
 
 
                 </tbody>
