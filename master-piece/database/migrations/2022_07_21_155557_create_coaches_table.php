@@ -16,9 +16,10 @@ class CreateCoachesTable extends Migration
         Schema::create('coaches', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('email');
-            $table->integer('password');
-            $table->integer('phone')->nullable();
+            $table->string('email');
+            $table->string('password');
+            $table->string('phone')->nullable();
+            $table->foreignId('categorises_id')->nullable()->constrained('categorises')->onDelete('cascade');
             $table->timestamps();
         });
     }

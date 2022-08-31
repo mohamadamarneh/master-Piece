@@ -5,12 +5,12 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Gota eCommerce HTML5</title>
-        <meta name="description" content="">
+        <title>mal3ab</title>
+        <meta name="description" content="among us">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="manifest" href="site.html">
-		<link rel="shortcut icon" type="image/x-icon" href={{asset("img/favicon.ico")}}>
+		<link rel="shortcut icon" type="image/x-icon" href={{asset('/images/logo/logo_transparent(1).png')}}>
         <!-- Place favicon.ico in the root directory -->
 
 		<!-- CSS here -->
@@ -42,7 +42,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-1 col-lg-2 col-md-2">
                             <div class="logo_3">
-                                <a href="index.html"><img src={{asset("img/logo/logo-1.png")}} alt="logo"></a>
+                                <a href="index.html"><img src={{asset("/images/logo/aaaaa(1).png")}} alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 d-none  d-sm-none d-xl-block">
@@ -194,9 +194,9 @@
                                         @if (Session::get('username'))
                                         <li class="menu-item-has-children"><a href="/profile">Profile</a>
                                             <ul class="sub-menu">
-                                                <li><a href="blog-grid.html">Account</a></li>
                                                 <li>
-                                                    
+                                                    <a href="account" >Account</a></li>
+                                                <li>
                                                     <a href="logout">Log out</a></li>
                 
                                             </ul>
@@ -208,7 +208,7 @@
                                         <li><a href="/register">Register</a></li>
                                         @endif
                                         
-                                        <li><a href="about">About</a></li>
+                                        <li><a href="/about">About</a></li>
                                         <li><a href="/contact">contact us </a></li>
                                        
                                     </ul>

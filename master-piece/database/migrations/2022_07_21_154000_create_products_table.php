@@ -23,10 +23,11 @@ class CreateProductsTable extends Migration
             $table->string('picture_three')->nullable();
             $table->string('picture_four')->nullable();
             $table->string('picture_five')->nullable();
+            $table->string('address')->nullable();
             // $table->foreign('gategury')->references('title')->on('caregurise')->onDelete('cascade'); 
             // $table->foreign('user_id')->references('id')->on('users');
 
-            $table->foreignId('categorises_id')->nullable()->constrained('categorises');
+            $table->foreignId('categorises_id')->nullable()->constrained('categorises')->onDelete('cascade');
             $table->string('gategury');
             $table->timestamps();
         });

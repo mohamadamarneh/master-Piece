@@ -9,8 +9,13 @@
         </div> --}}
             <div class="row">
                 <div class="col ml-5">
+                    @if (Session::get('succ'))
+                        <div class="alert alert-success" role="alert">
+                            {{ Session::get('succ') }}
+                        </div>
+                    @endif
                     <div class="checkout_form mb-100">
-
+                        {{-- {{dd($join)}} --}}
                         <div class="row mb-30">
                             <div class="checkout__wrap">
                                 <img src="img\team\user.png" alt="" style="width: 100px">
@@ -18,25 +23,24 @@
                             </div>
                             <div class="col">
                                 <div class="checkout__wrap " style="padding: 13px">
-                                    <h4><b>user name</b> </h4>
+                                    <h4><b>{{ $info->name }}</b> </h4>
 
                                 </div>
                             </div>
 
                         </div>
                         <div class="checkout__wrap">
-                            <h6>User Email </h6>
-                            <h5><b>mail@gmail.com</b></h5>
-                        </div>
-
-
-                        <div class="checkout__wrap">
-                            <h6>Phone Number </h6>
-                            <h5><b>+962 7780 90543</b> </h5>
+                            <h6>Email </h6>
+                            <h5><b>{{ $info->email }}</b></h5>
                         </div>
 
                         <div class="checkout__wrap">
-                            <a href="/edit" class="btn">edit</a>
+                            <form action="editprofile" method="post">
+                                @csrf
+
+                                <input type="submit" value="Edit" class="btn">
+                            </form>
+
                         </div>
 
                     </div>
@@ -44,100 +48,97 @@
 
                 </div>
                 <div class="col-10 mb-2">
-                    <div class="cart__acount ">
-                        <h5>Active Books</h5>
-                        <table>
-                            <tr class="first-child-2">
-                                <td>product</td>
-                                <td>NikeCourts Air Zoom <span>× 1</span></td>
-                            </tr>
-                            <tr class="first-child-2">
+                    <h4 class="font-weight-bold">Active Books</h4>
+                    <div class="cart__acount d-flex p-2 ml-2">
+                        
+                        @foreach ($join as $item)
+                            @if ($item->date >= date('Y-m-d'))
+                                <table class="m-4">
+                                    <tr class="first-child-2">
+                                        <td>Stadium </td>
+                                        <td>{{ $item->title }}<span></span></td>
+                                    </tr>
+                                    <tr class="first-child-2">
+                                        <td>Trainer</td>
+                                        <td class="lightbluee">{{ $item->trainer_A ? 'yes' : 'no' }}</td>
+                                    </tr>
+                                    <tr class="first-child-2">
+                                        <td>Wears</td>
+                                        <td class="lightbluee">{{ $item->wears_A ? 'yes' : 'no' }}</td>
+                                    </tr>
+                                    {{-- <tr class="first-child-2">
                                 <td>Subtotal</td>
-                                <td class="lightbluee">$18.00</td>
-                            </tr>
-                            <tr class="first-child lastchild">
-                                <td>Shipping</td>
-                                <td>Enter your address to view shipping options. </td>
-                            </tr>
-                            <tr class="first-child-2">
-                                <td>Total</td>
-                                <td class="lightbluee">$47.00</td>
-                            </tr>
-                        </table>
-                        <div class="checkout__accordion mt-30">
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Check payments
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Please send a check to Store Name, Store Street, Store Town, Store State /
-                                            County, Store Postcode.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Cash on delivery
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Pay with cash upon delivery.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            PayPal
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Cash on delivery
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                @php
+                                $a=$item->trainer_A ? 20 : 0 ;
+                                $b= $item->wears_A ? 5 : 0 ;
+                                $total= $item->price +$a +$b
+                                @endphp
+                                <td class="lightbluee">JOD 
+                                    @php
+                                    echo $total 
+                                @endphp
+                                </td>
+                            </tr> --}}
+                                    <tr class="first-child lastchild">
+                                        <td>Date</td>
+                                        <td>{{ $item->date }}
+                                            <br>
+                                            {{ $item->time }}
+                                        </td>
+                                    </tr>
+                                    <tr class="first-child-2">
+                                        <td>Total</td>
+                                        @php
+                                            $a = $item->trainer_A ? 20 : 0;
+                                            $b = $item->wears_A ? 5 : 0;
+                                            $total = $item->price + $a + $b;
+                                        @endphp
+                                        <td class="lightbluee">JOD
+                                            @php
+                                                echo $total;
+                                            @endphp
+                                        </td>
+                                    </tr>
+                                </table>
+                            @endif
+                        @endforeach
 
                     </div>
                 </div>
                 <div class="flex-row-reverse ">
                     <div class="cart__acount ">
                         <h5>Books History</h5>
-
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>staduim</th>
-                                    <th>time</th>
-                                    <th>product</th>
+                                    <th>Staduim</th>
+                                    <th>Date</th>
+                                    <th>Totla </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+                                @foreach ($join as $item)
+                                    @if ($item->date < date('Y-m-d'))
+                                        <tr>
+                                            <td scope="row">{{ $item->title }} </td>
+                                            <td>
+                                                {{ $item->date }} ' '
+                                                {{ $item->time }}
+                                            </td>
+                                            @php
+                                                $a = $item->trainer_A ? 20 : 0;
+                                                $b = $item->wears_A ? 5 : 0;
+                                                $total = $item->price + $a + $b;
+                                            @endphp
+                                            <td class="lightbluee">JOD
+                                                @php
+                                                    echo $total;
+                                                @endphp
+                                            </td>
+                                        </tr>
+                                    @endif
+                                @endforeach
+
                             </tbody>
                         </table>
 

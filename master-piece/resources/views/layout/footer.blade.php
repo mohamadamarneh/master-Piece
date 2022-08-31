@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
                 <div class="company__info wow fadeInUp " data-wow-duration=".5s" data-wow-delay=".3s">
-                    <a href="index.html"><h3 class="f-title"><img src="img/logo/gotalogo3.png" alt="logo"></h3></a>
+                    <a href="index.html"><h3 class="f-title"><img src={{asset("/images/logo/aaaaa(1).png")}} style="width: 200px" alt="logo"></h3></a>
                     <p>Gota Store is a premium theme with advanced admin module.<br> 
                      It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
                 </div>

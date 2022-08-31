@@ -17,10 +17,10 @@ class CreateCostumersTable extends Migration
             $table->id();
 
             $table->string('name');
-            $table->integer('email');
-            $table->integer('password');
-            $table->integer('phone')->nullable();
-            $table->integer('subemail')->nullable();
+            $table->string('email');
+            $table->string('password');
+            $table->string('phone')->nullable();
+            $table->string('subemail')->nullable();
             
             $table->timestamps();
         });

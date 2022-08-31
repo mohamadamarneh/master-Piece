@@ -1,6 +1,14 @@
 @extends('manage.layout.mastr')
 
 @section('name')
+
+
+@if (!Session::get('adminname'))
+    @php
+       header("location:javascript://history.go(-1)");
+        exit();
+    @endphp
+@endif
     <!-- partial -->
     <div class="main-panel">
         <div class="content-wrapper">

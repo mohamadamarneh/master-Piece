@@ -54,7 +54,7 @@
         <div class="form-group">
             <label for="">price</label>
             <input type="text" value="{{ old('price') }}" class="form-control" name="price" id=""
-                aria-describedby="emailHelpId" placeholder="name">
+                aria-describedby="emailHelpId" placeholder="15.60">
 
             @error('price')
             <div style="color: red">

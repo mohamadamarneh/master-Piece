@@ -1,27 +1,33 @@
 @extends('manage.layout.mastr')
 
 @section('name')
+    @if (!Session::get('adminname'))
+        @php
+            header('location:javascript://history.go(-1)');
+            exit();
+        @endphp
+    @endif
     <div class="container mt-5">
         {{-- <h1>crud example</h1> --}}
         <hr>
         @if (Session::get('success'))
             <div class="alert alert-success" role="alert">
-                <strong>{{ Session::get('success') }}</strong>
+                {{ Session::get('success') }}
             </div>
         @endif
         @if (Session::get('secdel'))
             <div class="alert alert-success" role="alert">
-                <strong>{{ Session::get('secdel') }}</strong>
+                {{ Session::get('secdel') }}
             </div>
         @endif
         @if (Session::get('succ'))
             <div class="alert alert-success" role="alert">
-                <strong>{{ Session::get('succ') }}</strong>
+                {{ Session::get('succ') }}
             </div>
         @endif
         @if (Session::get('fail'))
             <div class="alert alert-danger" role="alert">
-                <strong>{{ Session::get('fail') }}</strong>
+                {{ Session::get('fail') }}
             </div>
         @endif
         <h2>categorise</h2>
@@ -34,7 +40,7 @@
 
                 @error('name')
                     <div style="color: red">
-                       <p>* {{ $message }}</p>
+                        <p>* {{ $message }}</p>
                     </div>
                 @enderror
             </div>

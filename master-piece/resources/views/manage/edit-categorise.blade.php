@@ -3,9 +3,10 @@
 
 @section('name')
     <div class="container mt-5">
+
         <h2 class="mt-5">edit <b>{{ $info->name }}</b> Categury</h2>
         <hr>
-        <form action="{{ route('update') }}" method="POST">
+        <form action="{{ route('update-cat') }}" method="POST">
             @csrf
             <input type='hidden' name="cid" value="{{ $info->id }}">
             <div class="form-group">
@@ -14,7 +15,7 @@
                     aria-describedby="emailHelpId" placeholder="name">
 
                 @error('name')
-                    <div style="color: red">
+                    <div class="text-danger">
                         <p>* {{ $message }}</p>
                     </div>
                 @enderror

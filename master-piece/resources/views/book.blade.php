@@ -11,39 +11,50 @@
             <div class="row">
                 <div class="col-xl-8 col-lg-8 col-md-12">
                     <div class="cart_table">
+                       <form action="addbook" method="post">
+                        @csrf
+                        <input type="hidden" value="{{ $info->id }}" name="product_id">
+                        <input type="hidden" value="{{ $req->date }}" name="date">
+                        <input type="hidden" value="{{ $req->time }}" name="time">
+                        <input type="hidden" value="{{ Session::get('userid') }}" name="costumer_id">
+
+
                         <table>
                             <tr>
+
                                 <td>Stadium</td>
                                 <td>Date</td>
                                 <td>Uniform wears</td>
                                 <td>Coach</td>
-                                <td>Total</td>
-
+                                <td>Total (JOD)</td>
+                                
                             </tr>
                             <tbody>
                                 <tr class="max-width-set">
                                     <td>
-                                        <img src="img/desc/3-500x500.jpg" alt="">
+                                        {{ $info->title }}
+                                        <img src="" alt="">
                                     </td>
                                     <td>
-                                        2022/9/5 <br>
-                                        9:307
+                                        {{ $req->date }} <br>
+                                        {{ $req->time }}
                                     </td>
                                     <td>
-                                        <input type="checkbox">
+                                        <input type="checkbox" value="1" id='wears' onchange="wears()" name="wears_A">
                                     </td>
                                     <td>
-                                        <input type="checkbox">
+                                        <input type="checkbox" value="1" id="caoch" onchange="caoch()" name="trainer_A">
 
                                         {{-- <div class="viewcontent__action single_action pt-30">
                                             <span><input type="checkbox" placeholder="1"></span>
                                         </div> --}}
                                     </td>
-                                    <td>
-                                        $451.00
+                                    <td id="to">
+                                        {{ $info->price }}
                                     </td>
                                     <td class="width-set">
-                                        <form action=""><a href="javascript:void(0)"><i class="fal fa-times-circle"></i></a></form>
+                                        <form action=""><a href="javascript:void(0)"><i
+                                                    class="fal fa-times-circle"></i></a></form>
                                         {{-- <a href="javascript:void(0)"><i class="fal fa-times-circle"></i></a> --}}
                                     </td>
                                 </tr>
@@ -51,13 +62,18 @@
                             <tfoot>
                                 <tr class="design-footer">
                                     <td>
-                                        <input type="text" placeholder="Coupon Code">
+                                        {{-- <input type="text" placeholder="Coupon Code"> --}}
+                                        <input type="submit" onclick="wind()" value="procced to checkout">
                                     </td>
-                                    <td><button type="submit">Apply Coupon</button></td>
-                                    <td colspan="3"><a href="#">update cart</a></td>
+                                    {{-- <td><button type="submit">Apply Coupon</button></td>
+                                    <td colspan="3"><a href="#">update cart</a></td> --}}
                                 </tr>
                             </tfoot>
                         </table>
+
+
+
+                       </form>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-12">
@@ -65,29 +81,29 @@
                         <h5>Cart totals</h5>
                         <table>
                             <tr class="first-child">
-                                <td>Subtotal</td>
-                                <td>$18.00</td>
+                                <td>book</td>
+                                <td>{{ $info->price }}</td>
                             </tr>
-                            <tr class="first-child lastchild">
+                            {{-- <tr class="first-child lastchild">
                                 <td>Shipping</td>
                                 <td>Enter your address to view shipping options <br>
                                     Calculate shipping</td>
-                            </tr>
-                            <tr class="first-child">
+                            </tr> --}}
+                            <tr class="first-child" id="we" style="visibility: hidden">
                                 <td>Uniform wears</td>
-                                <td>$45.00</td>
+                                <td> +5.00</td>
                             </tr>
-                            <tr class="first-child">
+                            <tr class="first-child" id="cu" style="visibility: hidden">
                                 <td>COACH</td>
-                                <td>$30.00</td>
+                                <td> +20.00</td>
                             </tr>
                             <tr class="first-child">
-                                <td>Total</td>
-                                <td>$47.00</td>
+                                <td>Total (JOD)</td>
+                                <td id="tot">{{ $info->price }}</td>
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <a href="checkout.html"><input type="submit" value="procced to checkout"></a>
+                                    <input type="submit" onclick="wind()" value="procced to checkout">
                                 </td>
                             </tr>
                         </table>
@@ -157,5 +173,59 @@
             </div>
         </div>
     </div>
+    
     <!-- popup area end -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        let x = {{ $info->price }}
+
+        const caoch = () => {
+
+            if (document.getElementById('caoch').checked) {
+
+   
+
+
+
+                x = x + 20
+                document.getElementById('tot').innerHTML = x;
+                document.getElementById('to').innerHTML = x;
+                console.log(document.getElementById('caoch').checked)
+                document.getElementById('cu').style.visibility = "visible";
+            } else {
+                x = x - 20
+                document.getElementById('tot').innerHTML = x;
+                document.getElementById('to').innerHTML = x;
+                document.getElementById('cu').style.visibility = "hidden";
+            }
+        }
+
+        const wears = () => {
+            if (document.getElementById('wears').checked) {
+                x = x + 5
+                document.getElementById('tot').innerHTML = x;
+                document.getElementById('to').innerHTML = x;
+                document.getElementById('we').style.visibility = "visible";
+            } else {
+                x = x - 5
+                document.getElementById('tot').innerHTML = x;
+                document.getElementById('to').innerHTML = x;
+                document.getElementById('we').style.visibility = "hidden";
+            }
+            // document.getElementById('tot').innerHTML=x;
+            console.log(x);
+
+        }
+
+        const wind =()=>{
+
+            Swal.fire(
+                    'Your Book is recive!',
+                    'Check it in your profile !',
+                    'success'
+                )
+
+        }
+        console.log(x);
+    </script>
 @endsection
