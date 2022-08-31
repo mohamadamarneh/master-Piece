@@ -91,14 +91,15 @@
                                 <ul>
                                     <li><a href="#"><i class="fal fa-bars"></i></a></li>
                                     <li class="position-static"><a href="javascript:void(0)">browse categories</a>
+
                                         <ul class="vertical-dropdown">
-                                            <li><a href="#">Soccer</a></li>
-                                            <li><a href="#">Basketball</a></li>
-                                            
-                                            
-                                            <li><a href="shop.html">Tennis</a></li>
+
+                                            <li><a href="/categury/1">Soccer</a></li>
+                                            <li><a href="/categury/2">Basketball</a></li>
+                                            <li><a href="/categury/3">Tennis</a></li>
                                             
                                         </ul>
+
                                     </li>
                                     <li><a href="#"><i class="fal fa-chevron-down"></i></a></li>
                                 </ul>      
@@ -110,87 +111,9 @@
                                     <ul>                                                                    
                                         <li class="menu-item active"><a href="/">Home </a>
                                         </li>
-                                        <li class="position-static menu-item-has-children"><a href='/stadiums'>Shop</a>
-                                            <ul class="mega_menu" data-background={{asset("img/mega-menu/product.jpg")}}>
-                                                <li>
-                                                    <h4 class="mega_title">Shop Layout</h4>
-                                                    <ul class="mega_item">
-                                                        <li><a href="shop.html">Soccer</a></li>
-                                                        <li><a href="shop.html">Basketball</a></li>
-                                                        <li><a href="shop-3-width.html">Tennis</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <h4 class="mega_title">Categories</h4>
-                                                    <ul class="mega_item">
-                                                        <li><a href="shop-list.html">List View</a></li>
-                                                        <li><a href="shop-sm.html">Small Products</a></li>
-                                                        <li><a href="shop-large.html">Large Products</a></li>
-                                                        <li><a href="shop-3-width.html">Shop — 3 Items</a></li>
-                                                        <li><a href="shop-4.html">Shop — 4 Items</a></li>
-                                                        <li><a href="shop-sm.html">Shop — 5 Items</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-
-                                                    <h4 class="mega_title">Product Layout</h4>
-                                                    <ul class="mega_item">
-                                                        <li><a href="shop-sticky.html">Description Sticky</a></li>
-                                                        <li><a href="shop-carousel.html">Product Carousel</a></li>
-                                                        <li><a href="modern.html"> Gallery Modern</a></li>
-                                                        <li><a href="single.html"> Thumbnail Left</a></li>
-                                                        <li><a href="single-right.html">Thumbnail Right</a></li>
-                                                        <li><a href="single-bottom.html"> Thumbnail Botttom</a></li>
-                                                    </ul>
-                                                    
-                                                </li>
-                                                <li>
-    
-                                                </li>
-                                            </ul>
+                                        <li class="menu-item active"><a href="/stadiums">Shop </a>
                                         </li>
-                                        <li class="position-static menu-item-has-children"><a href="service.html">Categories</a>
-                                            <ul class="mega_menu_2">
-                                                <li data-background={{asset("img/mega-menu/product2.jpg")}}>
-                                                    <h4 class="mega_title_2">Basketball</h4>
-                                                    <ul class="mega_item_2">
-                                                        <li><a href="shop.html">stadium 1</a></li>
-                                                        <li><a href="shop.html">stadium 1</a></li>
-                                                        <li><a href="shop.html">stadium 1</a></li>
-                                                        <li><a href="shop.html">Kaoreet lobortis</a></li>
-                                                        <li><a href="shop.html">NikeCourt Zoom Prestige</a></li>
-                                                        <li><a href="shop.html">NikeCourts Air Zoom</a></li>
-                                                        <li><a href="shop.html">NikeCourts Air Zoom</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li data-background={{asset('img/mega-menu/soccer-nav(1).png')}}>
-                                                    <h4 class="mega_title_2">Soccer</h4>
-                                                    <ul class="mega_item_2">
-                                                        <li><a href="shop.html">stadium 1y</a></li>
-                                                        <li><a href="shop.html">stadium 1</a></li>
-                                                        <li><a href="shop.html">stadium 1</a></li>
-                                                        <li><a href="shop.html">stadium 1</a></li>
-                                                        <li><a href="shop.html">stadium 1</a></li>
-                                                        <li><a href="shop.html">V-Neck T-Shirt</a></li>
-                                                        <li><a href="shop.html">WordPress Pennant</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li data-background={{asset("img/mega-menu/product4.jpg")}}>
-                                                    <h4 class="mega_title_2">Tennis</h4>
-                                                    <ul class="mega_item_2">
-                                                        <li><a href="shop.html">stadium 1</a></li>
-                                                        <li><a href="shop.html">stadium 1</a></li>
-                                                        <li><a href="shop.html">stadium 1</a></li>
-                                                        <li><a href="shop.html">stadium 1</a></li>
-                                                        <li><a href="shop.html">NikeCourt Zoom Prestige</a></li>
-                                                        <li><a href="shop.html">NikeCourts Air Zoom</a></li>
-                                                        <li><a href="shop.html">NikeCourts Air Zoom</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-
+                    
                                         @if (Session::get('username'))
                                         <li class="menu-item-has-children"><a href="/profile">Profile</a>
                                             <ul class="sub-menu">
@@ -228,45 +151,3 @@
             </div>
         </header>
         <!-- header area end -->
-
-        <div class="cart__sidebar">
-            <div class="container">
-                <div class="cart__content">
-                    <div class="cart-text">
-                        <h3 class="mb-40">Shopping cart</h3>
-                        <div class="add_cart_product">
-                            <div class="add_cart_product__thumb">
-                                <img src={{asset("assets/img/product/29-3.jpg")}} alt="">
-                            </div>
-                            <div class="add_cart_product__content">
-                                <h5><a href="shop.html">Running 3-Stripes</a></h5>
-                                <p>1 × $66.00</p>
-                                <button class="cart_close"><i class="fal fa-times"></i></button>
-                            </div>
-                        </div>
-                        <div class="add_cart_product">
-                            <div class="add_cart_product__thumb">
-                                <img src="assets/img/product/17.jpg" alt="">
-                            </div>
-                            <div class="add_cart_product__content">
-                                <h5><a href="shop.html">Buddy non Stripes</a></h5>
-                                <p>1 × $40.00</p>
-                                <button class="cart_close"><i class="fal fa-times"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-icon">
-                        <i class="fal fa-times"></i>
-                    </div>
-                    <div class="cart-bottom">
-                        <div class="cart-bottom__text">
-                            <span>Subtotal:</span>
-                            <span class="end">$121.00</span>
-                            <a href="cart.html">view cart</a>
-                            <a href="checkout.html">checkout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cart-offcanvas-overlay"></div>

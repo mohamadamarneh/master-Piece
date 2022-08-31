@@ -78,7 +78,6 @@ class mainController extends Controller
             'info' => $row,
             'join' => $join
         ];
-        // return  $join;
         return view('profile', $data);
     }
 
@@ -123,7 +122,6 @@ class mainController extends Controller
 
 
 
-
     function single($title)
     {
 
@@ -143,8 +141,6 @@ class mainController extends Controller
     }
 
 
-
-
     function bookpage(Request $request)
     {
 
@@ -155,11 +151,6 @@ class mainController extends Controller
         ];
         return view('book', $data);
     }
-
-
-
-
-
 
 
 
@@ -200,14 +191,17 @@ class mainController extends Controller
 
 
     function cats($id){
-        $Categories = Products::where('categorises_id',$id)->get();
 
+        // $pt = Products::where('categorises_id',$id)->get();
 
-        $data = [
-            'list' => $Categories,
-        ];
+        $pt =Products::where('categorises_id','=',$id)->get();
+
+        $data = array(
+            'list' => $pt
+        );
+        
         return view('categury', $data);
-        // return $Categories ;
+        // return $data ;
 
 
     }

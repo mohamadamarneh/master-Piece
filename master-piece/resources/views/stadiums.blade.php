@@ -104,9 +104,9 @@
                         <div class="product-widget">
                             <h3 class="widget-title mb-30">Stadiums categories</h3>
                             <ul class="product-categories">
-                                <li><a href="shop.html">Football <span>(5)</span></a></li>
-                                <li><a href="shop.html">Basketball <span>(0)</span></a></li>
-                                <li><a href="shop.html">Tennis <span>(2)</span></a></li>
+                                <li><a href="/categury/1">Football <span> +5</span></a></li>
+                                <li><a href="/categury/2">Basketball <span> +3</span></a></li>
+                                <li><a href="/categury/3">Tennis <span> +2</span></a></li>
                             </ul>
                         </div>
                         <div class="product-widget pt-50">

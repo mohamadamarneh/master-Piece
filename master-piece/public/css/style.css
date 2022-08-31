@@ -5919,7 +5919,16 @@ label {
 }
 
 .swiper-slide.bgclr3 {
-  background: #7D0B2C;
+
+
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://127.0.0.1:8000/images/marcel-strauss-Wt9IRghaLN0-unsplash.jpg');
+
+
+/* 
+background-image: url('http://127.0.0.1:8000/images/marcel-strauss-Wt9IRghaLN0-unsplash.jpg'); */
+background-position: bottom;
+background-size: cover;
+
 }
 
 .background-white {
@@ -7259,12 +7268,12 @@ input:-ms-input-placeholder {
 
 .slider-item {
   width: 100%;
-  background: #ffab02;
+
   height: 830px;
 }
 
 .slider-item.bgclr2 {
-  background: #d33333;
+ 
 }
 
 .slider_images {
@@ -7538,7 +7547,9 @@ input:-ms-input-placeholder {
 .text_3 {
   font-size: 400px;
   text-transform: uppercase;
-  color: #6e0724;
+  /* color: #6e0724; */
+  background-image: url('/public/images/marcel-strauss-Wt9IRghaLN0-unsplash.jpg');
+  background-size: cover;
   left: 28%;
   bottom: -71px;
   text-align: center;

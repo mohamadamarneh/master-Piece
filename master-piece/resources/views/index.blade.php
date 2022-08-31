@@ -29,57 +29,11 @@
     </div>
     <div class="offcanvas-overlay"></div>
 
-    <!-- cart area start  -->
-    <div class="cart__sidebar">
-        <div class="container">
-            <div class="cart__content">
-                <div class="cart-text">
-                    <h3 class="mb-40">Shopping cart</h3>
-                    <div class="add_cart_product">
-                        <div class="add_cart_product__thumb">
-                            <img src="img/product/29-3.jpg" alt="">
-                        </div>
-                        <div class="add_cart_product__content">
-                            <h5><a href="shop.html">Running 3-Stripes</a></h5>
-                            <p>1 × $66.00</p>
-                            <button class="cart_close"><i class="fal fa-times"></i></button>
-                        </div>
-                    </div>
-                    <div class="add_cart_product">
-                        <div class="add_cart_product__thumb">
-                            <img src="img/product/17.jpg" alt="">
-                        </div>
-                        <div class="add_cart_product__content">
-                            <h5><a href="shop.html">Buddy non Stripes</a></h5>
-                            <p>1 × $40.00</p>
-                            <button class="cart_close"><i class="fal fa-times"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-icon">
-                    <i class="fal fa-times"></i>
-                </div>
-                <div class="cart-bottom">
-                    <div class="cart-bottom__text">
-                        <span>Subtotal:</span>
-                        <span class="end">$121.00</span>
-                        <a href="cart.html">view cart</a>
-                        <a href="checkout.html">checkout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="cart-offcanvas-overlay"></div>
-    <!-- cart area end   img/slider/aYvlsP.jpg -->
-
     <!-- slider start -->
     <div class="slider-active2 swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide slider-item bgclr3 pb-200">
-                <div class="shapes_3">
-                    <h2 class="absoulute text_3">Top sale</h2>
-                </div>
+
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
@@ -91,11 +45,7 @@
                                     href="/stadiums">Discover Now</a>
                             </div>
                         </div>
-                        <div class="col-xl-7 offset-xl-1 col-lg-8 col-md-8 col-sm-12 d-none d-lg-block">
-                            <div class="slider_image_3">
-                                <img src="img/slider/slider-img-3.png" alt="">
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -110,7 +60,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                    <div class="fetures_3" data-background="img/features/banar3-1.png">
+                    <div class="fetures_3" data-background="http://localhost:8000/images/pexels-edgar-colomba-2169302.jpg" style="background-sixe:cover;">
                         <div class="fetures_3_header pt-30">
                             <span class="offer-text offer_3">hot deal<i class="far fa-stars"></i></span>
                         </div>
@@ -124,7 +74,7 @@
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-sm-none d-md-block">
-                    <div class="fetures_3" data-background="img/features/banar3-2.png">
+                    <div class="fetures_3" data-background="http://localhost:8000/images/pexels-markus-spiske-114296.jpg">
                         <div class="fetures_3_header pt-30 text-center ">
                             <p>This month big Deal</p>
                         </div>
@@ -138,7 +88,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                    <div class="fetures_3" data-background="img/features/banar3-3.png">
+                    <div class="fetures_3" data-background="http://localhost:8000/images/pexels-ingo-joseph-2618794.jpg">
                         <div class="fetures_3_header pt-30 ">
                             <span class="text-white text-uppercase">New Stadiums </span>
                         </div>
@@ -568,7 +518,7 @@
                                 <img src="img/service/iocnglobal.png" alt="">
                             </div>
                             <div class="service__content">
-                                <h4>Worldwide Shipping</h4>
+                                <h4 class="text-uppercase">we are evry where</h4>
                                 <p>Duis autem vel eum iriure dolor in hendrerit<br> velit esse molestie consequat.</p>
                             </div>
                         </div>
@@ -713,47 +663,47 @@
     <div class="blog-area mb-100">
         <div class="container">
             <div class="section-wrapper text-center mb-35">
-                <h2 class="section-title"><a href="blog.html">from our blog</a></h2>
+                <h2 class="section-title"><a href="">from our blog</a></h2>
                 <p>Commodo sociosqu venenatis cras dolor sagittis integer luctus sem primis<br> eget maecenas sed urna
                     malesuada.</p>
             </div>
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="blog" style="background-image: url('img/blog/9.jpg');">
+                    <div class="blog" style="background-image: url('http://localhost:8000/images/1658514544-www.jpg');">
                         <div class="blog__content">
-                            <span class="mb-15">Shoes, Clothing</span>
-                            <h3 class="blog-title "><a href="blog.html">Mauris rhoncus aliquet purus</a></h3>
+                            <span class="mb-15"></span>
+                            <h3 class="blog-title "><a href="">Mauris rhoncus aliquet purus</a></h3>
                             <p>By Erentheme /<span>September 16, 2019</span></p>
-                            <a href="blog.html">Continue reading</a>
+                            <a href="">Continue reading</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="bpost">
                         <div class="bpost__thumb">
-                            <img src="img/blog/blog1.jpg" alt="blog_post">
+                            <img src="http://localhost:8000/images/pexels-nappy-936037.jpg" alt="blog_post" style="width: 200px">
                         </div>
                         <div class="bpost__content">
                             <span>Shoes, Clothing</span>
-                            <h3 class="blog-title title-2"><a href="blog.html">Simple & Easy DIY Flower Deco</a></h3>
+                            <h3 class="blog-title title-2"><a href="">Simple & Easy DIY Flower Deco</a></h3>
                             <p>By <span>Erentheme </span>/September 16, 2019</p>
                             <p>Sapien luctus id justo suscipit nonummy eget hymenaeos...</p>
                         </div>
                     </div>
                     <div class="bpost">
                         <div class="bpost__thumb">
-                            <img src="img/blog/blog2.jpg" alt="blog_post">
+                            <img src="http://localhost:8000/images/pexels-oliver-sj%C3%B6str%C3%B6m-1103829.jpg" alt="blog_post" style="width: 200px">
                         </div>
                         <div class="bpost__content">
                             <span>Shoes, Clothing</span>
-                            <h3 class="blog-title title-2"><a href="blog.html">Take A Look At The Most Photo</a></h3>
+                            <h3 class="blog-title title-2"><a href="">Take A Look At The Most Photo</a></h3>
                             <p>By <span>Erentheme </span>/September 16, 2019</p>
                             <p>Sapien luctus id justo suscipit nonummy eget hymenaeos...</p>
                         </div>
                     </div>
                     <div class="bpost m-0">
                         <div class="bpost__thumb">
-                            <img src="img/blog/blog3.jpg" alt="blog_post">
+                            <img src="http://localhost:8000/images/pexels-alexander-nadrilyanski-3651674.jpg" alt="blog_post" style="width: 200px">
                         </div>
                         <div class="bpost__content">
                             <span>Shoes, Clothing</span>
