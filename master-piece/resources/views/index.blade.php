@@ -65,7 +65,7 @@
                             <span class="offer-text offer_3">hot deal<i class="far fa-stars"></i></span>
                         </div>
                         <div class="fetures_3_body">
-                            <a href="shop.html">
+                            <a href="http://127.0.0.1:8000/categury/3">
                                 <h2 class="mb-60">reservations<br>stadiums<br> for All</h2>
                             </a>
                             <p>sale <span>20% Off</span><br> Tennis Stadiums</p>
@@ -79,7 +79,7 @@
                             <p>This month big Deal</p>
                         </div>
                         <div class="fetures_3_body text-center">
-                            <a href="shop.html">
+                            <a href="http://127.0.0.1:8000/categury/1">
                                 <h2 class="fetures_s_2 fesection-2 mb-80">football<span> Stadiums</span></h2>
                             </a>
                             <a class="button_style_f" href="shop.html">Hot deals in Irbid</a>
@@ -93,7 +93,7 @@
                             <span class="text-white text-uppercase">New Stadiums </span>
                         </div>
                         <div class="fetures_3_body">
-                            <a href="shop.html">
+                            <a href="http://127.0.0.1:8000/categury/2">
                                 <h2 class="mb-30"><br>Basketball<br>in jordan </h2>
                             </a>
                             <p>sale <span class="text-clr-change"> 15% Off</span><br>for basketball stadiums</p>
@@ -511,6 +511,7 @@
     <div class="service-area mb-80 pt-70">
         <div class="container">
             <div class="row">
+                
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     <div class="service__wrapper">
                         <div class="service">
@@ -731,7 +732,7 @@
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12">
                     <div class="subscribe-form-3 text-center">
-                        <form action="#" method="POST">
+                        <form action="" method="get">
                             <input class="input_3" type="email" placeholder="Enter your email here..." />
                             <button type="submit"><i class="fal fa-paper-plane absoulute send"></i></button>
                         </form>

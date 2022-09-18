@@ -8,10 +8,11 @@
             <p><i class="fal fa-window-maximize"></i>Have a coupon? Click here to enter your code</p>
         </div> --}}
             <div class="row">
+     
                 <div class="col ml-5">
-                    @if (Session::get('succ'))
+                    @if (Session::get('success'))
                         <div class="alert alert-success" role="alert">
-                            {{ Session::get('succ') }}
+                            {{ Session::get('success') }}
                         </div>
                     @endif
                     <div class="checkout_form mb-100">
@@ -50,7 +51,7 @@
                 <div class="col-10 mb-2">
                     <h4 class="font-weight-bold">Active Books</h4>
                     <div class="cart__acount d-flex p-2 ml-2">
-                        
+
                         @foreach ($join as $item)
                             @if ($item->date >= date('Y-m-d'))
                                 <table class="m-4">
@@ -122,7 +123,7 @@
                                         <tr>
                                             <td scope="row">{{ $item->title }} </td>
                                             <td>
-                                                {{ $item->date }} ' '
+                                                {{ $item->date }}  | 
                                                 {{ $item->time }}
                                             </td>
                                             @php

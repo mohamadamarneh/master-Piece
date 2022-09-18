@@ -17,8 +17,13 @@ class Authcheck
     public function handle(Request $request, Closure $next)
     {
 
-        if(session()->has('username') && ($request->path() == 'login' || $request->path() == 'register')){
+        if (session()->has('username') && ($request->path() == 'login' || $request->path() == 'register')) {
+
             return back();
+        }
+        if (!(session()->has('username')) && ($request->path() == 'book' || $request->path() == 'account')) {
+
+            return redirect('/login')->with('log', 'you most be login');
         }
 
         // if(!session()->has('username') && ($request->path() == 'login' || $request->path() == 'register')){
@@ -27,6 +32,5 @@ class Authcheck
         // }
 
         return $next($request);
-
     }
 }

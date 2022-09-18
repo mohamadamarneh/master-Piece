@@ -9,6 +9,11 @@
     <div class="f_cart_area pt-110 mb-100">
         <div class="container">
             <div class="row">
+                @if (Session::get('fail'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ Session::get('fail') }}
+                    </div>
+                @endif
                 <div class="col-xl-8 col-lg-8 col-md-12">
                     <div class="cart_table">
                         <form action="addbook" method="post">
@@ -17,7 +22,6 @@
                             <input type="hidden" value="{{ $req->date }}" name="date">
                             <input type="hidden" value="{{ $req->time }}" name="time">
                             <input type="hidden" value="{{ Session::get('userid') }}" name="costumer_id">
-
 
                             <table>
                                 <tr>
@@ -65,7 +69,8 @@
                                     <tr class="design-footer">
                                         <td>
                                             {{-- <input type="text" placeholder="Coupon Code"> --}}
-                                            <input type="submit" onclick="wind()" value="procced to checkout">
+                                            {{-- <input type="submit" onclick="wind()" value="procced to checkout"> --}}
+                                            <input type="submit" value="procced to checkout">
                                         </td>
                                         {{-- <td><button type="submit">Apply Coupon</button></td>
                                     <td colspan="3"><a href="#">update cart</a></td> --}}

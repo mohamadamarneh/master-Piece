@@ -9,10 +9,15 @@
                 <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 offset-xl-1">
                     <h3 class="title-7">Login</h3>
                     <div class="login_wrapper" style="padding: 40px 75px;">
-                        
+
                         @if (Session::get('fail'))
                             <div class=" p-2 text-danger">
                                 {{ Session::get('fail') }}
+                            </div>
+                        @endif
+                        @if (Session::get('log'))
+                            <div class=" p-2 ">
+                                {{ Session::get('log') }}
                             </div>
                         @endif
 

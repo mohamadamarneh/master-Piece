@@ -115,7 +115,7 @@
                                         </li>
                     
                                         @if (Session::get('username'))
-                                        <li class="menu-item-has-children"><a href="/profile">Profile</a>
+                                        <li class="menu-item-has-children"><a href="#">Profile</a>
                                             <ul class="sub-menu">
                                                 <li>
                                                     <a href="account" >Account</a></li>

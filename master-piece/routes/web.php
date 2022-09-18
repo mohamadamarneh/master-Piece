@@ -35,7 +35,7 @@ Route::get('/',[mainController::class,'index']);
 Route::get('/single/{title}',[mainController::class,'single']);
 
 
-Route::get('/book',[mainController::class,'bookpage']);
+
 
 Route::post('addbook',[mainController::class,'addbook']);
 
@@ -45,7 +45,7 @@ Route::post('editprofileres',[mainController::class,'editprofileres']);
 
 
 
-Route::get('/account',[mainController::class,'account']);
+
 
 
 
@@ -67,6 +67,11 @@ Route::group(['middleware'=>'Authcheck'],function(){
     
     Route::get('/register',[mainController::class,'registerpage']);
     Route::get('/login',[mainController::class,'login']);
+
+
+    Route::get('/book',[mainController::class,'bookpage']);
+    Route::get('/account',[mainController::class,'account']);
+
 
 });
 

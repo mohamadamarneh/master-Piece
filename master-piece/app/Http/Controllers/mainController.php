@@ -28,25 +28,40 @@ class mainController extends Controller
     function addbook(Request $request)
     {
 
+        $join = books::join('costumers', 'books.costumer_id', '=', 'costumers.id')
+            ->join('products', 'books.product_id', '=', 'products.id')->where('costumers.id', $request->session()->get('userid'))
+            ->get(['costumers.*', 'products.*', 'books.*']);
 
-        $trainer = $request->input('trainer_A') ? 1 : 0;
-        $waers = $request->input('wears_A') ? 1 : 0;
+        $con = 0;
+        foreach ($join as $item) {
 
-        $query = books::insert([
+            if ($item->date >= date('Y-m-d')) {
+                $con += 1;
+            }
+        }
+        if ($con > 1) {
 
-            'costumer_id' => $request->input('costumer_id'),
-            'product_id' => $request->input('product_id'),
-            'date' => $request->input('date'),
-            'time' => $request->input('time'),
-            'trainer_A' => $trainer,
-            'wears_A' => $waers
-
-
-        ]);
-        if ($query) {
-            return back()->with('success', 'data added successfully');
+            return back()->with('fail', 'cant book more than 3 books ');
         } else {
-            return back()->with('fail', 'data not save');
+
+            $trainer = $request->input('trainer_A') ? 1 : 0;
+            $waers = $request->input('wears_A') ? 1 : 0;
+
+            $query = books::insert([
+
+                'costumer_id' => $request->input('costumer_id'),
+                'product_id' => $request->input('product_id'),
+                'date' => $request->input('date'),
+                'time' => $request->input('time'),
+                'trainer_A' => $trainer,
+                'wears_A' => $waers
+
+            ]);
+            if ($query) {
+                return redirect('/account')->with('success', 'Your book added successfully');
+            } else {
+                return back()->with('fail', 'data not save');
+            }
         }
     }
 
@@ -68,7 +83,7 @@ class mainController extends Controller
 
 
         $join = books::join('costumers', 'books.costumer_id', '=', 'costumers.id')
-            ->join('products', 'books.product_id', '=', 'products.id')
+            ->join('products', 'books.product_id', '=', 'products.id')->where('costumers.id', $request->session()->get('userid'))
             ->get(['costumers.*', 'products.*', 'books.*']);
 
 
@@ -98,7 +113,7 @@ class mainController extends Controller
             'name' => 'required|max:50|min:2',
             'email' => 'required|email',
             'password' => 'required|min:5'
-            
+
 
         ]);
 
@@ -113,8 +128,8 @@ class mainController extends Controller
                 ]
             );
         if ($updating) {
-            return redirect('/account')->with('succ', 'updating success !') ;
-        }else{
+            return redirect('/account')->with('succ', 'updating success !');
+        } else {
             return 'among';
         }
     }
@@ -126,15 +141,15 @@ class mainController extends Controller
     {
 
         $row = products::where('title', $title)->first();
-        $rel = products::where('categorises_id', $row->categorises_id)->where('id','!=',$row->id)->get();
+        $rel = products::where('categorises_id', $row->categorises_id)->where('id', '!=', $row->id)->get();
         $comments = comments::where('product_id', '=', $row->id)->get();
         // $books=books::where('product_id','=',$row->id)->groupBy('date')->get();
-        $books=books::where('product_id','=',$row->id)->get();
+        $books = books::where('product_id', '=', $row->id)->get();
         $data = [
-            'books'=>$books ,
+            'books' => $books,
             'info' => $row,
             'singlecomments' => $comments,
-            'rel'=> $rel
+            'rel' => $rel
         ];
         // return $books ;
         return view('single', $data);
@@ -190,16 +205,17 @@ class mainController extends Controller
     }
 
 
-    function cats($id){
+    function cats($id)
+    {
 
         // $pt = Products::where('categorises_id',$id)->get();
 
-        $pt =Products::where('categorises_id','=',$id)->get();
+        $pt = Products::where('categorises_id', '=', $id)->get();
 
         $data = array(
             'list' => $pt
         );
-        
+
         return view('categury', $data);
         // return $data ;
 
